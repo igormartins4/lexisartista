@@ -68,3 +68,40 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+body {
+        font-family: 'Inter', sans-serif;
+        background-color: #FFF8F0; /* A warm off-white */
+        color: #4A2E2C; /* A deep brown for text */
+    }
+    .text-shadow-custom {
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    }
+    .countdown-item {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .cta-button {
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    .cta-button:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+    .social-icon:hover {
+        transform: scale(1.2);
+        color: #D97706; /* Amber-600 */
+    }
+    /* Animation for elements on scroll */
+    .fade-in-section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in-section.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
