@@ -1,6 +1,5 @@
-import React from "react";
-import { FadeInSection } from "./components/FadeInSection";
-import { Countdown } from "./components/Countdown";
+import { FadeInSection } from "../components/FadeInSection";
+import { Countdown } from "../components/Countdown";
 
 // --- Componentes de Ícones SVG ---
 export const InstagramIcon = () => (
@@ -55,7 +54,7 @@ export const YouTubeIcon = () => (
 );
 
 // --- Componente Principal ---
-function App() {
+export function PeitoSamboPage() {
   const countDownDate = "2025-09-26T00:00:00";
   const currentYear = new Date().getFullYear();
 
@@ -266,5 +265,3 @@ function App() {
     </>
   );
 }
-
-export default App;
