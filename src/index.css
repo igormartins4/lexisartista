@@ -1,13 +1,21 @@
+/**
+ * 1. Diretivas do Tailwind CSS
+ * Estas são as camadas base do Tailwind.
+ */
 @import "tailwindcss";
 
+/**
+ * 2. Estilos Base e Temas (Light/Dark)
+ * Variáveis para o tema escuro (padrão) e claro.
+ */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #4a2e2c; /* Cor do texto padrão (marrom escuro) */
+  background-color: #fff8f0; /* Cor de fundo padrão (branco quente) */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,26 +23,42 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* Tema claro explícito para navegadores que o preferem */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
 }
 
+/**
+ * 3. Estilos de Elementos Globais
+ * Estilos unificados para elementos HTML básicos.
+ */
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+  transition: color 0.25s;
+}
+a:hover {
+  color: #535bf2;
+}
+@media (prefers-color-scheme: light) {
+  a:hover {
+    color: #747bff;
+  }
 }
 
 button {
@@ -55,53 +79,46 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
   button {
     background-color: #f9f9f9;
   }
 }
 
+/**
+ * 4. Classes de Utilidade Personalizadas do Projeto
+ * Classes específicas para a landing page "Peito Sambô".
+ */
+.text-shadow-custom {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
 
-body {
-        font-family: 'Inter', sans-serif;
-        background-color: #FFF8F0; /* A warm off-white */
-        color: #4A2E2C; /* A deep brown for text */
-    }
-    .text-shadow-custom {
-        text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
-    }
-    .countdown-item {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    .cta-button {
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
-    .cta-button:hover {
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    }
-    .social-icon:hover {
-        transform: scale(1.2);
-        color: #D97706; /* Amber-600 */
-    }
-    /* Animation for elements on scroll */
-    .fade-in-section {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-    .fade-in-section.is-visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.countdown-item {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cta-button {
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.cta-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #d97706; /* Cor Amber-600 */
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
