@@ -153,7 +153,7 @@ function App() {
   return (
     <>
       <CustomStyles />
-      <div className="antialiased">
+      <div className="antialiased w-full h-full">
         <header className="relative min-h-screen flex flex-col items-center justify-center text-white overflow-hidden p-4">
           <div className="absolute inset-0 z-0">
             <img src="https://placehold.co/1920x1080/6E2C00/FFF8F0?text=Foto+Promocional" alt="Imagem promocional do single Peito Sambô" className="w-full h-full object-cover" />
