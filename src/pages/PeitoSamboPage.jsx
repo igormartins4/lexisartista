@@ -1,12 +1,14 @@
 import { FadeInSection } from "../components/FadeInSection";
 import { Countdown } from "../components/Countdown";
 
+import fotoCapa from "../assets/Capa.png";
+
 // --- Componentes de Ícones SVG ---
 export const InstagramIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
+    width="48"
+    height="48"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -22,8 +24,8 @@ export const InstagramIcon = () => (
 export const TikTokIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
+    width="48"
+    height="48"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -39,8 +41,8 @@ export const TikTokIcon = () => (
 export const YouTubeIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
+    width="48"
+    height="48"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -71,10 +73,7 @@ export function PeitoSamboPage() {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-wider text-shadow-custom">
             Novo Single de Lexis
           </h1>
-          <h2
-            className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-wider text-shadow-custom mt-2 mb-6"
-            style={{ color: "#FBBF24" }}
-          >
+          <h2 className="text-amarelo text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-wider text-shadow-custom mt-2 mb-6">
             Peito Sambô
           </h2>
           <p className="text-lg md:text-2xl font-light max-w-2xl text-shadow-custom">
@@ -122,7 +121,7 @@ export function PeitoSamboPage() {
             <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8 md:gap-12">
               <div className="md:w-1/2">
                 <img
-                  src="https://placehold.co/600x600/D97706/FFFFFF?text=Arte+do+Single"
+                  src={fotoCapa}
                   alt="Arte oficial do single Peito Sambô"
                   className="rounded-lg shadow-xl w-full"
                 />
