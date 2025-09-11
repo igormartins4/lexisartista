@@ -2,77 +2,33 @@ import { FadeInSection } from "../components/FadeInSection";
 import { Countdown } from "../components/Countdown";
 
 import fotoCapa from "../assets/Capa.png";
+const teaserVideo = "https://drive.google.com/file/d/1lm-RiT-L68QDiFNjAa0HUhiX-iAlx2DX/view?usp=sharing";
 
-// --- Componentes de Ícones SVG ---
-export const InstagramIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="48"
-    height="48"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-  </svg>
-);
-export const TikTokIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="48"
-    height="48"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M16 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"></path>
-    <path d="M12 2v10"></path>
-    <path d="M12 12a4 4 0 1 1-4-4"></path>
-  </svg>
-);
-export const YouTubeIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="48"
-    height="48"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
-    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-  </svg>
-);
+const countDownDate = "2025-09-26T00:00:00";
+const currentYear = new Date().getFullYear();
 
 export function PeitoSamboPage() {
-  const countDownDate = "2025-09-26T00:00:00";
-  const currentYear = new Date().getFullYear();
+
   return (
     <div className="w-full h-full antialiased">
+
       <header className="relative min-h-screen flex flex-col items-center justify-center text-white overflow-hidden p-4">
+
         <div className="absolute inset-0 z-0">
           <img
-            src="https://placehold.co/1920x1080/6E2C00/FFF8F0?text=Foto+Promocional"
+            src={fotoCapa}
             alt="Imagem promocional do single Peito Sambô"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+          {/* <div className="absolute inset-0 bg-black bg-opacity-60"></div> */}
         </div>
+
         <div className="relative z-10 text-center flex flex-col items-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-wider text-shadow-custom">
+
+          <h1 className="text-2xl md:text-6xl lg:text-7xl font-black uppercase tracking-wider text-shadow-custom">
             Novo Single de Lexis
           </h1>
+          
           <h2 className="text-amarelo text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-wider text-shadow-custom mt-2 mb-6">
             Peito Sambô
           </h2>
@@ -90,6 +46,8 @@ export function PeitoSamboPage() {
         </div>
       </header>
 
+
+
       <main>
         <FadeInSection>
           <section
@@ -100,6 +58,7 @@ export function PeitoSamboPage() {
               <h3 className="text-3xl md:text-4xl font-bold mb-8">
                 Assista ao Teaser
               </h3>
+              
               <div className="aspect-video max-w-4xl mx-auto rounded-lg overflow-hidden shadow-2xl">
                 <video
                   className="w-full h-full object-cover"
@@ -109,9 +68,11 @@ export function PeitoSamboPage() {
                   loop
                   poster="https://placehold.co/1280x720/D97706/FFFFFF?text=Teaser+Video"
                 >
-                  {/* <source src="your-video.mp4" type="video/mp4" /> */}
+                  <source src={teaserVideo} type="video/mp4" />
                 </video>
               </div>
+
+
             </div>
           </section>
         </FadeInSection>
@@ -213,12 +174,21 @@ export function PeitoSamboPage() {
               <p className="mb-8 text-stone-600 text-lg">
                 "Versos d’Alma – ouça a playlist que inspira o novo single"
               </p>
-              <a
-                href="#"
-                className="cta-button inline-block bg-amber-500 hover:bg-amber-600 text-stone-900 font-bold py-4 px-10 rounded-full text-lg uppercase tracking-wider"
-              >
-                Ouvir no Spotify
-              </a>
+
+              <div className="p-2">
+                <iframe
+                  data-testid="embed-iframe"
+                  style={{ borderRadius: "12px" }}
+                  src="https://open.spotify.com/embed/playlist/7w6hY3UFY1CbUsGp5h1m9r?utm_source=generator"
+                  width="100%"
+                  height="352"
+                  frameBorder="0"
+                  allowFullScreen
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                  title="Sua Playlist do Spotify"
+                ></iframe>
+              </div>
             </div>
           </section>
         </FadeInSection>
@@ -260,3 +230,55 @@ export function PeitoSamboPage() {
     </div>
   );
 }
+
+// --- Componentes de Ícones SVG ---
+export const InstagramIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="48"
+    height="48"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+  </svg>
+);
+export const TikTokIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="48"
+    height="48"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M16 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"></path>
+    <path d="M12 2v10"></path>
+    <path d="M12 12a4 4 0 1 1-4-4"></path>
+  </svg>
+);
+export const YouTubeIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="48"
+    height="48"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+  </svg>
+);
