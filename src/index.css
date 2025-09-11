@@ -4,31 +4,32 @@
  */
 @import "tailwindcss";
 
+@theme {
+  --color-verde: #6b8232;
+  --color-amarelo: #fcb314;
+  --color-marrom: #6a3517;
+  --color-vinho: #5b0002;
+  --color-branco: #ffffff;
+  --color-preto: #000000;
+}
+
 /**
- * 2. Estilos Base e Temas (Light/Dark)
- * Variáveis para o tema escuro (padrão) e claro.
+ * 2. Estilos Base e Variáveis de Cor
+ * Definição das variáveis de cor utilizadas no projeto.
  */
 :root {
-  font-family: "Inter", sans-serif;
+  font-family: "DM Sans", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: #4a2e2c; /* Cor do texto padrão (marrom escuro) */
-  background-color: #fff8f0; /* Cor de fundo padrão (branco quente) */
+  color: var(--color-marrom);
+  background-color: var(--color-branco);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-/* Tema claro explícito para navegadores que o preferem */
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
 }
 
 /**
