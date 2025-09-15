@@ -3,7 +3,6 @@
  */
 @import "tailwindcss";
 
-
 @theme{
   
   --color-verde: #6b8232;
@@ -15,20 +14,12 @@
   --color-preto: #000000;
 
   --font-principal: "Carattere", sans-serif;
-
 }
-
-
-
-
 
 /**
  * 2. Variáveis de Cor
  * Centralização das cores utilizadas no projeto.
  */
-
-
-
 
 /**
  * 3. Estilos Base

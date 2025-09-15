@@ -22,7 +22,7 @@ export function PeitoSamboPage() {
             alt="Imagem promocional do single Peito Sambô"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black opacity-20 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-black opacity-60 pointer-events-none"></div>
         </div>
 
         <div className="relative z-10 text-center flex flex-col items-center">
@@ -40,9 +40,9 @@ export function PeitoSamboPage() {
           <Countdown targetDate={countDownDate} />
           <a
             href="#"
-            className="cta-button bg-amber-500 hover:bg-amber-600 text-stone-900 font-bold py-4 px-10 rounded-full text-lg uppercase tracking-wider"
+            className="cta-button bg-amarelo hover:bg-amber-600 text-stone-900 font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider"
           >
-            O Pré-Save logo estará disponível
+            <button>Pré-save disponível em breve</button>
           </a>
         </div>
       </header>
@@ -142,24 +142,24 @@ export function PeitoSamboPage() {
                   name="name"
                   placeholder="Seu nome"
                   required
-                  className="w-full p-4 rounded-lg border border-stone-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition"
+                  className="w-full p-4 rounded-lg border border-stone-300 focus:ring-2 focus:ring-amarelo focus:border-amarelo outline-none transition"
                 />
                 <input
                   type="email"
                   name="email"
                   placeholder="Seu melhor e-mail"
                   required
-                  className="w-full p-4 rounded-lg border border-stone-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition"
+                  className="w-full p-4 rounded-lg border border-stone-300 focus:ring-2 focus:ring-amarelo focus:border-amarelo outline-none transition"
                 />
                 <input
                   type="tel"
                   name="whatsapp"
                   placeholder="Seu WhatsApp (opcional)"
-                  className="w-full p-4 rounded-lg border border-stone-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition"
+                  className="w-full p-4 rounded-lg border border-stone-300 focus:ring-2 focus:ring-amarelo focus:border-amarelo outline-none transition"
                 />
                 <button
                   type="submit"
-                  className="cta-button w-full bg-stone-800 hover:bg-stone-900 text-white font-bold py-4 px-10 rounded-full text-lg uppercase tracking-wider"
+                  className="cta-button w-full bg-stone-800 hover:bg-stone-900 text-white font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider"
                 >
                   Quero receber!
                 </button>
@@ -211,11 +211,9 @@ export function PeitoSamboPage() {
               </p>
               <a
                 href="#"
-                className="cta-button bg-amber-500 hover:bg-amber-600 text-stone-900 font-bold py-4 px-10 rounded-full text-lg uppercase tracking-wider"
+                className="cta-button bg-amarelo hover:bg-amber-600 text-stone-900 font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider"
               >
-                <button disabled="disabled">
-                  Pré-save disponível em breve
-                </button>
+                <button>Pré-save disponível em breve</button>
               </a>
             </div>
           </section>
