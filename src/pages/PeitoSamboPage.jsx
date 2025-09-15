@@ -1,14 +1,18 @@
 import { FadeInSection } from "../components/FadeInSection";
 import { Countdown } from "../components/Countdown";
+import OptimizedImage from "../components/OptimizedImage";
 
 import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 
 import fotoCapa from "../assets/Capa.png";
+
 import fotoInicio from "../assets/inicio.jpg";
+
 import logoPref from "../assets/logo-pref.png";
 
+const linkPreSave = "https://musicpro.live/s/7900279496364";
 const countDownDate = "2025-09-26T00:00:00";
 const currentYear = new Date().getFullYear();
 
@@ -17,11 +21,12 @@ export function PeitoSamboPage() {
     <div className="w-full h-full antialiased">
       <header className="relative min-h-screen flex flex-col items-center justify-center text-white overflow-hidden p-4">
         <div className="absolute inset-0 z-0">
-          <img
+          <OptimizedImage
             src={fotoInicio}
             alt="Imagem promocional do single Peito Sambô"
             className="w-full h-full object-cover"
           />
+
           <div className="absolute inset-0 bg-black opacity-60 pointer-events-none"></div>
         </div>
 
@@ -39,10 +44,10 @@ export function PeitoSamboPage() {
           </p>
           <Countdown targetDate={countDownDate} />
           <a
-            href="#"
+            href={linkPreSave}
             className="cta-button bg-amarelo hover:bg-amber-600 text-stone-900 font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider"
           >
-            <button>Pré-save disponível em breve</button>
+            <button>Pré-save já disponível</button>
           </a>
         </div>
       </header>
@@ -78,7 +83,7 @@ export function PeitoSamboPage() {
           <section id="sobre" className="py-16 md:py-24">
             <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8 md:gap-12">
               <div className="md:w-1/2">
-                <img
+                <OptimizedImage
                   src={fotoCapa}
                   alt="Arte oficial do single Peito Sambô"
                   className="rounded-lg shadow-xl w-full"
@@ -210,10 +215,10 @@ export function PeitoSamboPage() {
                 lançamento.
               </p>
               <a
-                href="#"
+                href={linkPreSave}
                 className="cta-button bg-amarelo hover:bg-amber-600 text-stone-900 font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider"
               >
-                <button>Pré-save disponível em breve</button>
+                <button>Faça já o pré-save!</button>
               </a>
             </div>
           </section>
@@ -225,7 +230,7 @@ export function PeitoSamboPage() {
           <p className="font-bold mb-4">Apoio:</p>
           <div className="flex justify-center items-center gap-8 mb-8 opacity-70">
             <span className="text-xl font-bold">
-              <img src={logoPref} alt="Logo FMIC" />
+              <OptimizedImage src={logoPref} alt="Logo FMIC" />
             </span>
           </div>
           <p>&copy; {currentYear} Lexis. Todos os direitos reservados.</p>
