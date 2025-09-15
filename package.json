@@ -36,6 +36,7 @@
     "svgo": "^4.0.0",
     "tailwindcss": "^4.1.12",
     "vite": "^7.1.2",
+    "vite-imagetools": "^8.0.0",
     "vite-plugin-image-optimizer": "^2.0.2"
   }
 }

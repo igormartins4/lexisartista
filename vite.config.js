@@ -1,12 +1,16 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
-import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
+import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
+import { imagetools } from "vite-imagetools";
 
 // https://vite.dev/config/
 export default defineConfig({
   base: "/",
-  plugins: [react(), tailwindcss(),
+  plugins: [
+    react(),
+    tailwindcss(),
+    imagetools(),
     ViteImageOptimizer({
       /* Passe opções de configuração aqui */
       png: {
@@ -39,7 +43,7 @@ export default defineConfig({
         multipass: true,
         plugins: [
           {
-            name: 'preset-default',
+            name: "preset-default",
             params: {
               overrides: {
                 cleanupNumericValues: false,
@@ -52,16 +56,15 @@ export default defineConfig({
               convertPathData: false,
             },
           },
-          'sortAttrs',
+          "sortAttrs",
           {
-            name: 'addAttributesToSVGElement',
+            name: "addAttributesToSVGElement",
             params: {
-              attributes: [{ xmlns: 'http://www.w3.org/2000/svg' }],
+              attributes: [{ xmlns: "http://www.w3.org/2000/svg" }],
             },
           },
         ],
       },
     }),
-  
   ],
 });
