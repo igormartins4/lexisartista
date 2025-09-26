@@ -55,20 +55,20 @@ export function PeitoSamboPage() {
       <main>
         <FadeInSection>
           <section
-            id="video-teaser"
+            id="video-clipe"
             className="py-16 md:py-24 bg-stone-800 text-white"
           >
             <div className="container mx-auto px-4 text-center">
               <h3 className="text-3xl md:text-4xl font-bold mb-8">
-                Assista ao Teaser
+                Assista ao Videoclipe
               </h3>
 
               <div className="aspect-video max-w-4xl mx-auto rounded-lg overflow-hidden shadow-2xl">
                 <iframe
                   width="100%"
                   height="100%"
-                  src="https://www.youtube.com/embed/W2E1BlnVlX8"
-                  title="Teaser Peito Sambô"
+                  src="https://www.youtube.com/embed/ELcPAH_zdL0?si=_m-yD12IFKurqGRs"
+                  title="Clipe Peito Sambô"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
