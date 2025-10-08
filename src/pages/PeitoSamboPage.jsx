@@ -1,5 +1,5 @@
 import { FadeInSection } from "../components/FadeInSection";
-import { Countdown } from "../components/Countdown";
+// import { Countdown } from "../components/Countdown";
 import OptimizedImage from "../components/OptimizedImage";
 
 import { FaInstagram } from "react-icons/fa";
@@ -7,13 +7,14 @@ import { FaTiktok } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 
 import fotoCapa from "../assets/Capa.png";
-
+import fotoWorkshop from "../assets/workshop.jpeg";
 import fotoInicio from "../assets/inicio.jpg";
-
 import logoPref from "../assets/logo-pref.png";
 
 const linkPreSave = "https://musicpro.live/s/7900279496364";
-const countDownDate = "2025-09-26T00:00:00";
+const linkWorkshop = "https://forms.gle/o5gNQJ2c2sUs4LT16";
+
+// const countDownDate = "2025-09-26T00:00:00";
 const currentYear = new Date().getFullYear();
 
 export function PeitoSamboPage() {
@@ -38,21 +39,85 @@ export function PeitoSamboPage() {
           <h2 className="text-amarelo text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-wider text-shadow-custom mt-2 mb-6">
             Peito Sambô
           </h2>
-          <p className="text-lg md:text-2xl font-light max-w-2xl text-shadow-custom">
+          <p className="text-lg md:text-2xl font-light max-w-2xl text-shadow-custom mb-8">
             Um samba que bate no coração: <br className="md:hidden" /> Peito
-            Sambô chega dia 26/09.
+            Sambô já chegou!!
           </p>
-          <Countdown targetDate={countDownDate} />
-          <a
-            href={linkPreSave}
-            className="cta-button bg-amarelo hover:bg-amber-600 text-stone-900 font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider"
-          >
-            <button>Pré-save já disponível</button>
-          </a>
+          {/* <Countdown targetDate={countDownDate} /> */}
+          <button>
+            <a
+              href={linkPreSave}
+              className="cta-button bg-amarelo hover:bg-amber-600 text-stone-900 font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span>Single Disponível</span>
+            </a>
+          </button>
         </div>
       </header>
 
       <main>
+        <FadeInSection>
+          <section className="py-16 md:py-24">
+            <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+              <div className="md:w-1/2 m-2 lg:p-6">
+                <OptimizedImage
+                  src={fotoWorkshop}
+                  alt="Anúncio do workshop de composição com Lexis"
+                  className="rounded-lg shadow-xl w-full"
+                />
+              </div>
+              <div className="md:w-1/2 text-center md:text-left text-red-950">
+                <div>
+                  <h1 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4">
+                    Workshop "Samba em Cena: Vozes da Comunidade!" 🎶
+                  </h1>
+                  <div className="w-full leading-relaxed text-lg lg:text-2xl">
+                    <p className="mb-2">
+                      Dias <strong>11 e 18 de outubro</strong>, artistas do
+                      projeto revelam os bastidores do single e clipe{" "}
+                      <strong>Peito Sambô</strong>, da criação à divulgação.
+                    </p>
+                    <p className="mb-2">
+                      Evento gratuito e aberto ao público.{" "}
+                      <strong>
+                        Inscritos que participarem recebem certificado.
+                      </strong>
+                    </p>
+                    <p className="mb-2">
+                      <strong>Local:</strong> Estação Juventude Contagem (Av.
+                      João César de Oliveira, 174 – JK, Contagem/MG)
+                    </p>
+                    <p className="mb-2">
+                      <strong>Horário:</strong> 9h às 11h
+                    </p>
+                    <p className="mb-2">
+                      Venha trocar experiências e fortalecer a cena cultural
+                      independente! 💛
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-8 flex justify-center md:justify-start items-center gap-4">
+                  <div className="flex gap-4 text-2xl">
+                    <button>
+                      <a
+                        href={linkWorkshop}
+                        className="cta-button bg-amarelo hover:bg-amber-600 text-stone-900 font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        <span>Faça sua Inscrição</span>
+                      </a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </FadeInSection>
+
         <FadeInSection>
           <section
             id="video-clipe"
@@ -101,24 +166,32 @@ export function PeitoSamboPage() {
                       href="https://www.instagram.com/lexisartista"
                       aria-label="Instagram"
                       className="social-icon transition-transform duration-300"
+                      rel="noopener noreferrer"
+                      target="_blank"
                     >
                       <div className="p-4 bg-amarelo rounded-full flex items-center justify-center">
                         <FaInstagram className="text-vinho" />
                       </div>
                     </a>
+
                     <a
                       href="https://www.tiktok.com/@lexisartista"
                       aria-label="TikTok"
                       className="social-icon transition-transform duration-300"
+                      rel="noopener noreferrer"
+                      target="_blank"
                     >
                       <div className="p-4 bg-amarelo rounded-full flex items-center justify-center">
                         <FaTiktok className="text-vinho" />
                       </div>
                     </a>
+
                     <a
                       href="https://www.youtube.com/@lexisartista"
                       aria-label="YouTube"
                       className="social-icon transition-transform duration-300"
+                      rel="noopener noreferrer"
+                      target="_blank"
                     >
                       <div className="p-4 bg-amarelo rounded-full flex items-center justify-center">
                         <FaYoutube className="text-vinho" />
@@ -211,15 +284,18 @@ export function PeitoSamboPage() {
                 Não fique de fora!
               </h3>
               <p className="mb-8 text-stone-300 text-lg">
-                Garanta que "Peito Sambô" esteja na sua playlist no dia do
-                lançamento.
+                Adicione já "Peito Sambô" na sua playlist!
               </p>
-              <a
-                href={linkPreSave}
-                className="cta-button bg-amarelo hover:bg-amber-600 text-stone-900 font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider"
-              >
-                <button>Faça já o pré-save!</button>
-              </a>
+              <button>
+                <a
+                  href={linkPreSave}
+                  className="cta-button bg-amarelo hover:bg-amber-600 text-stone-900 font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <span>Single já Disponível</span>
+                </a>
+              </button>
             </div>
           </section>
         </FadeInSection>
