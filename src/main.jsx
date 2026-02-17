@@ -5,7 +5,7 @@ import { HomePage } from "./pages/HomePage.jsx";
 import { PeitoSamboPage } from "./pages/PeitoSamboPage.jsx";
 import { ClaveDeSolPage } from "./pages/ClaveDeSolPage.jsx";
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { getAnalytics, logEvent, setAnalyticsCollectionEnabled } from "firebase/analytics";
 
 import "./index.css";
 
@@ -20,7 +20,13 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+export const analytics = getAnalytics(app);
+
+// Enable analytics collection
+setAnalyticsCollectionEnabled(analytics, true);
+
+// Log page_view event on load
+logEvent(analytics, "page_view");
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

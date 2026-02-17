@@ -228,24 +228,24 @@ export function ClaveDeSolPage() {
           <p className="font-bold mb-4">Apoio:</p>
           {/* Desktop: imagem completa */}
           <div className="hidden md:flex justify-center items-center mb-8">
-            <div className="bg-stone-800 p-6 rounded-lg">
+            <div className="bg-stone-800 p-8 rounded-lg">
               <OptimizedImage
                 src={logosApoio}
                 alt="Logos de apoio"
-                className="max-w-md"
+                className="max-w-2xl w-full"
               />
             </div>
           </div>
           {/* Mobile: duas linhas */}
-          <div className="flex md:hidden flex-col items-center gap-4 mb-8">
-            <div className="bg-stone-800 p-4 rounded-lg w-full max-w-sm">
+          <div className="flex md:hidden flex-col items-center gap-6 mb-8 px-2">
+            <div className="bg-stone-800 p-6 rounded-lg w-full">
               <OptimizedImage
                 src={logosLinha1}
                 alt="Logos de apoio - linha 1"
                 className="w-full"
               />
             </div>
-            <div className="bg-stone-800 p-4 rounded-lg w-full max-w-sm">
+            <div className="bg-stone-800 p-6 rounded-lg w-full">
               <OptimizedImage
                 src={logosLinha2}
                 alt="Logos de apoio - linha 2"
