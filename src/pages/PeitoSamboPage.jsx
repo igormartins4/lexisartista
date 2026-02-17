@@ -7,12 +7,11 @@ import { FaTiktok } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 
 import fotoCapa from "../assets/Capa.png";
-import fotoWorkshop from "../assets/workshop.jpeg";
 import fotoInicio from "../assets/inicio.jpg";
 import logoPref from "../assets/logo-pref.png";
 
 const linkPreSave = "https://musicpro.live/s/7900279496364";
-const linkWorkshop = "https://forms.gle/o5gNQJ2c2sUs4LT16";
+// const linkWorkshopVideo = "https://youtu.be/BSm2aWmMy6o?si=0k6LbwBhHoFLdgAu";
 
 // const countDownDate = "2025-09-26T00:00:00";
 const currentYear = new Date().getFullYear();
@@ -58,65 +57,6 @@ export function PeitoSamboPage() {
       </header>
 
       <main>
-        <FadeInSection>
-          <section className="py-16 md:py-24">
-            <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8 md:gap-12">
-              <div className="md:w-1/2 m-2 lg:p-6">
-                <OptimizedImage
-                  src={fotoWorkshop}
-                  alt="Anúncio do workshop de composição com Lexis"
-                  className="rounded-lg shadow-xl w-full"
-                />
-              </div>
-              <div className="md:w-1/2 text-center md:text-left text-red-950">
-                <div>
-                  <h1 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4">
-                    Workshop "Samba em Cena: Vozes da Comunidade!" 🎶
-                  </h1>
-                  <div className="w-full leading-relaxed text-lg lg:text-2xl">
-                    <p className="mb-2">
-                      Dias <strong>11 e 18 de outubro</strong>, artistas do
-                      projeto revelam os bastidores do single e clipe{" "}
-                      <strong>Peito Sambô</strong>, da criação à divulgação.
-                    </p>
-                    <p className="mb-2">
-                      Evento gratuito e aberto ao público.{" "}
-                      <strong>
-                        Inscritos que participarem recebem certificado.
-                      </strong>
-                    </p>
-                    <p className="mb-2">
-                      <strong>Local:</strong> Estação Juventude Contagem (Av.
-                      João César de Oliveira, 174 – JK, Contagem/MG)
-                    </p>
-                    <p className="mb-2">
-                      <strong>Horário:</strong> 9h às 11h
-                    </p>
-                    <p className="mb-2">
-                      Venha trocar experiências e fortalecer a cena cultural
-                      independente! 💛
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-8 flex justify-center md:justify-start items-center gap-4">
-                  <div className="flex gap-4 text-2xl">
-                    <button>
-                      <a
-                        href={linkWorkshop}
-                        className="cta-button bg-amarelo hover:bg-amber-600 text-stone-900 font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        <span>Faça sua Inscrição</span>
-                      </a>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </FadeInSection>
 
         <FadeInSection>
           <section
@@ -143,6 +83,53 @@ export function PeitoSamboPage() {
             </div>
           </section>
         </FadeInSection>
+
+        <FadeInSection>
+          <section className="py-16 md:py-24">
+            <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+              <div className="md:w-1/2 m-2 lg:p-6">
+                <div className="aspect-video rounded-lg overflow-hidden shadow-xl w-full">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/BSm2aWmMy6o?si=BqnIHBUMDAhm4pRE"
+                    title="Workshop SAMBA EM CENA: Vozes da Comunidade"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
+                </div>
+              </div>
+              <div className="md:w-1/2 text-center md:text-left text-red-950">
+                <div>
+                  <h3 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4">
+                    Workshop "SAMBA EM CENA: Vozes da Comunidade" 🎶
+                  </h3>
+                  <div className="w-full leading-relaxed text-lg lg:text-xl">
+                    <p className="mb-4">
+                      Este vídeo é o <strong>Workshop Online</strong> do projeto
+                      "SAMBA EM CENA: Vozes da Comunidade", pensado como
+                      contrapartida formativa e, ao mesmo tempo, como um registro
+                      audiovisual do processo vivido ao longo da realização do
+                      projeto.
+                    </p>
+                    <p className="mb-4">
+                      Mais do que um workshop tradicional, este conteúdo se
+                      constrói como um <strong>compilado de memórias, bastidores
+                      e percepções</strong>, reunindo entrevistas com a equipe,
+                      imagens do desenvolvimento do projeto e relatos de quem fez
+                      tudo isso acontecer.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+        </FadeInSection>
+
+
 
         <FadeInSection>
           <section id="sobre" className="py-16 md:py-24">
