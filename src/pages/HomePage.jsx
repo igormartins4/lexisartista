@@ -3,7 +3,12 @@ export function HomePage() {
   const links = [
     {
       href: "/peito-sambo",
-      label: "Peito Sambô (Single)",
+      label: "Peito Sambô",
+      description: "Página do single de Lexis",
+    },
+        {
+      href: "/clave-de-sol",
+      label: "Clave de Sol",
       description: "Página do novo single de Lexis",
     },
     // Exemplo de como adicionar mais links:

@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HomePage } from "./pages/HomePage.jsx";
 import { PeitoSamboPage } from "./pages/PeitoSamboPage.jsx";
+import { ClaveDeSolPage } from "./pages/ClaveDeSolPage.jsx";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
@@ -27,6 +28,7 @@ createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/peito-sambo" element={<PeitoSamboPage />} />
+        <Route path="/clave-de-sol" element={<ClaveDeSolPage />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
