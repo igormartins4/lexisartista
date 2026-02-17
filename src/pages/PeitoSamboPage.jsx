@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { FadeInSection } from "../components/FadeInSection";
 // import { Countdown } from "../components/Countdown";
 import OptimizedImage from "../components/OptimizedImage";
@@ -18,7 +19,23 @@ const currentYear = new Date().getFullYear();
 
 export function PeitoSamboPage() {
   return (
-    <div className="w-full h-full antialiased">
+    <>
+      <Helmet>
+        <title>Peito Sambô | Lexis - Single de Samba</title>
+        <meta name="description" content="Peito Sambô é um samba que bate no coração. Single autoral de Lexis que nasce do luto, mas celebra a vida — um canto sobre memória, liberdade, acolhimento e fé." />
+        <link rel="canonical" href="https://lexisartista.com.br/peito-sambo" />
+        <meta property="og:type" content="music.song" />
+        <meta property="og:url" content="https://lexisartista.com.br/peito-sambo" />
+        <meta property="og:title" content="Peito Sambô | Lexis - Single de Samba" />
+        <meta property="og:description" content="Peito Sambô é um samba que bate no coração. Single autoral de Lexis sobre memória, liberdade, acolhimento e fé." />
+        <meta property="og:image" content="https://lexisartista.com.br/og-peito-sambo.png" />
+        <meta property="music:musician" content="Lexis" />
+        <meta name="twitter:url" content="https://lexisartista.com.br/peito-sambo" />
+        <meta name="twitter:title" content="Peito Sambô | Lexis - Single de Samba" />
+        <meta name="twitter:description" content="Peito Sambô é um samba que bate no coração. Single autoral de Lexis sobre memória, liberdade, acolhimento e fé." />
+        <meta name="twitter:image" content="https://lexisartista.com.br/og-peito-sambo.png" />
+      </Helmet>
+      <div className="w-full h-full antialiased">
       <header className="relative min-h-screen flex flex-col items-center justify-center text-white overflow-hidden p-4">
         <div className="absolute inset-0 z-0">
           <OptimizedImage
@@ -300,5 +317,6 @@ export function PeitoSamboPage() {
         </div>
       </footer>
     </div>
+    </>
   );
 }

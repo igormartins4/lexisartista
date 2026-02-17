@@ -1,0 +1,10 @@
+# Robots.txt for lexisartista.com.br
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://lexisartista.com.br/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1

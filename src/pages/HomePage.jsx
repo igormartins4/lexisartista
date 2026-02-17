@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { FaInstagram, FaYoutube, FaTiktok, FaSpotify } from "react-icons/fa";
 
 import capaPeitoSambo from "../assets/Capa.png";
@@ -51,7 +52,21 @@ export function HomePage() {
   ];
 
   return (
-    <div className="min-h-screen bg-linear-to-b from-stone-900 via-stone-800 to-stone-900 text-white">
+    <>
+      <Helmet>
+        <title>Lexis | Cantora e Compositora de Samba</title>
+        <meta name="description" content="Lexis é cantora e compositora brasileira de samba. Ouça seus singles 'Clave de Sol' e 'Peito Sambô'. Músicas autorais que unem samba, jazz, fé e brasilidade." />
+        <link rel="canonical" href="https://lexisartista.com.br/" />
+        <meta property="og:url" content="https://lexisartista.com.br/" />
+        <meta property="og:title" content="Lexis | Cantora e Compositora de Samba" />
+        <meta property="og:description" content="Lexis é cantora e compositora brasileira de samba. Ouça seus singles 'Clave de Sol' e 'Peito Sambô'." />
+        <meta property="og:image" content="https://lexisartista.com.br/og-image.png" />
+        <meta name="twitter:url" content="https://lexisartista.com.br/" />
+        <meta name="twitter:title" content="Lexis | Cantora e Compositora de Samba" />
+        <meta name="twitter:description" content="Lexis é cantora e compositora brasileira de samba. Ouça seus singles 'Clave de Sol' e 'Peito Sambô'." />
+        <meta name="twitter:image" content="https://lexisartista.com.br/og-image.png" />
+      </Helmet>
+      <div className="min-h-screen bg-linear-to-b from-stone-900 via-stone-800 to-stone-900 text-white">
       {/* Header */}
       <header className="pt-12 pb-8 px-4 text-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-wider mb-2">
@@ -164,5 +179,6 @@ export function HomePage() {
         </p>
       </footer>
     </div>
+    </>
   );
 }

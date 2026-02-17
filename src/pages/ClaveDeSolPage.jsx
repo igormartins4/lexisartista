@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { FadeInSection } from "../components/FadeInSection";
 import OptimizedImage from "../components/OptimizedImage";
 
@@ -17,7 +18,23 @@ const currentYear = new Date().getFullYear();
 
 export function ClaveDeSolPage() {
   return (
-    <div className="w-full h-full antialiased">
+    <>
+      <Helmet>
+        <title>Clave de Sol | Lexis - Single de Samba</title>
+        <meta name="description" content="Clave de Sol é um samba que encoraja a recomeçar. Single autoral de Lexis que une samba e jazz para falar sobre recomeço, fé e perseverança. Projeto Samba d'Alma." />
+        <link rel="canonical" href="https://lexisartista.com.br/clave-de-sol" />
+        <meta property="og:type" content="music.song" />
+        <meta property="og:url" content="https://lexisartista.com.br/clave-de-sol" />
+        <meta property="og:title" content="Clave de Sol | Lexis - Single de Samba" />
+        <meta property="og:description" content="Clave de Sol é um samba que encoraja a recomeçar. Single autoral de Lexis que une samba e jazz. Projeto Samba d'Alma." />
+        <meta property="og:image" content="https://lexisartista.com.br/og-clave-de-sol.png" />
+        <meta property="music:musician" content="Lexis" />
+        <meta name="twitter:url" content="https://lexisartista.com.br/clave-de-sol" />
+        <meta name="twitter:title" content="Clave de Sol | Lexis - Single de Samba" />
+        <meta name="twitter:description" content="Clave de Sol é um samba que encoraja a recomeçar. Single autoral de Lexis que une samba e jazz." />
+        <meta name="twitter:image" content="https://lexisartista.com.br/og-clave-de-sol.png" />
+      </Helmet>
+      <div className="w-full h-full antialiased">
       <header className="relative min-h-screen flex flex-col items-center justify-center text-white overflow-hidden p-4">
         <div className="absolute inset-0 z-0">
           <OptimizedImage
@@ -257,5 +274,6 @@ export function ClaveDeSolPage() {
         </div>
       </footer>
     </div>
+    </>
   );
 }
