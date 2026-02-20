@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import { FadeInSection } from "../components/FadeInSection";
 // import { Countdown } from "../components/Countdown";
 import OptimizedImage from "../components/OptimizedImage";
@@ -300,6 +301,25 @@ export function PeitoSamboPage() {
                   <span>Single já Disponível</span>
                 </a>
               </button>
+            </div>
+          </section>
+        </FadeInSection>
+
+        <FadeInSection>
+          <section className="py-16 md:py-24 text-center">
+            <div className="container mx-auto px-4">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-red-950">
+                Quer conhecer mais?
+              </h3>
+              <p className="mb-8 text-stone-600 text-lg">
+                Explore outros trabalhos e descubra mais sobre a artista.
+              </p>
+              <Link
+                to="/"
+                className="inline-block bg-red-950 hover:bg-red-900 text-white font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider transition-colors"
+              >
+                Conheça mais trabalhos da artista
+              </Link>
             </div>
           </section>
         </FadeInSection>
