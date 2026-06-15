@@ -63,7 +63,7 @@ export function HomePage() {
           <h1 className="font-principal text-8xl md:text-9xl text-amarelo leading-none">Lexis</h1>
           <div className="flex items-center justify-center gap-3 mt-2">
             <span className="h-px w-10 bg-amarelo/30" aria-hidden="true" />
-            <p className="text-white/40 text-xs uppercase tracking-[0.3em]">
+            <p className="text-texto-decorativo text-xs uppercase tracking-label">
               Cantora e Compositora
             </p>
             <span className="h-px w-10 bg-amarelo/30" aria-hidden="true" />
@@ -74,7 +74,7 @@ export function HomePage() {
           <section aria-labelledby="singles-heading" className="mb-14">
             <h2
               id="singles-heading"
-              className="text-xs uppercase tracking-[0.35em] text-white/30 text-center mb-8"
+              className="text-xs uppercase tracking-label-wide text-texto-decorativo text-center mb-8"
             >
               Discografia
             </h2>
@@ -89,7 +89,7 @@ export function HomePage() {
                 aria-label={`Ver página de ${featured.label}`}
               >
                 {featured.isNew && (
-                  <span className="absolute top-4 right-4 z-10 bg-amarelo text-stone-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                  <span className="absolute top-4 right-4 z-10 bg-amarelo text-terra text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
                     Novo
                   </span>
                 )}
@@ -103,11 +103,15 @@ export function HomePage() {
                 </div>
                 <div className="p-6 flex flex-col justify-between grow">
                   <div>
-                    <p className="text-xs uppercase tracking-[0.3em] text-white/40 mb-2">single</p>
+                    <p className="text-xs uppercase tracking-label text-texto-decorativo mb-2">
+                      single
+                    </p>
                     <h3 className="font-principal text-4xl md:text-5xl text-amarelo leading-none mb-3 group-hover:text-ambar transition-colors">
                       {featured.label}
                     </h3>
-                    <p className="text-white/60 text-sm md:text-base">{featured.description}</p>
+                    <p className="text-texto-moderado text-sm md:text-base">
+                      {featured.description}
+                    </p>
                   </div>
                   <div className="mt-6 flex items-center text-amarelo font-semibold text-sm">
                     <span>Ouvir agora</span>
@@ -140,7 +144,7 @@ export function HomePage() {
                     aria-label={`Ver página de ${single.label}`}
                   >
                     {single.isNew && (
-                      <span className="absolute top-3 right-3 z-10 bg-amarelo text-stone-900 text-xs font-bold px-2 py-0.5 rounded-full uppercase tracking-wide">
+                      <span className="absolute top-3 right-3 z-10 bg-amarelo text-terra text-xs font-bold px-2 py-0.5 rounded-full uppercase tracking-wide">
                         Novo
                       </span>
                     )}
@@ -156,7 +160,7 @@ export function HomePage() {
                       <h3 className="text-sm font-bold group-hover:text-amarelo transition-colors">
                         {single.label}
                       </h3>
-                      <p className="text-white/40 text-xs mt-1">{single.description}</p>
+                      <p className="text-texto-decorativo text-xs mt-1">{single.description}</p>
                     </div>
                   </a>
                 ))}
@@ -167,7 +171,7 @@ export function HomePage() {
           <section aria-labelledby="social-heading" className="text-center">
             <h2
               id="social-heading"
-              className="text-xs uppercase tracking-[0.35em] text-white/30 mb-8"
+              className="text-xs uppercase tracking-label-wide text-texto-decorativo mb-8"
             >
               Siga nas redes
             </h2>
