@@ -1,24 +1,17 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { FadeInSection } from "../components/FadeInSection";
-// import { Countdown } from "../components/Countdown";
 import OptimizedImage from "../components/OptimizedImage";
+import { SocialLinks } from "../components/SocialLinks";
+import { PageFooter } from "../components/PageFooter";
 
-import { FaInstagram } from "react-icons/fa";
-import { FaTiktok } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
-
-import { trackClick, trackOutbound } from "../lib/analytics";
+import { trackClick } from "../lib/analytics";
 
 import fotoCapa from "../assets/Capa.png";
 import fotoInicio from "../assets/inicio.jpg";
 import logoPref from "../assets/logo-pref.png";
 
 const linkPreSave = "https://musicpro.live/s/7900279496364";
-// const linkWorkshopVideo = "https://youtu.be/BSm2aWmMy6o?si=0k6LbwBhHoFLdgAu";
-
-// const countDownDate = "2025-09-26T00:00:00";
-const currentYear = new Date().getFullYear();
 
 export function PeitoSamboPage() {
   return (
@@ -38,101 +31,100 @@ export function PeitoSamboPage() {
         <meta name="twitter:description" content="Peito Sambô é um samba que bate no coração. Single autoral de Lexis sobre memória, liberdade, acolhimento e fé." />
         <meta name="twitter:image" content="https://lexisartista.com.br/og-peito-sambo.png" />
       </Helmet>
+
       <div className="w-full h-full antialiased">
-      <header className="relative min-h-screen flex flex-col items-center justify-center text-white overflow-hidden p-4">
-        <div className="absolute inset-0 z-0">
-          <OptimizedImage
-            src={fotoInicio}
-            alt="Imagem promocional do single Peito Sambô"
-            className="w-full h-full object-cover"
-          />
+        <header className="relative min-h-screen flex flex-col items-center justify-center text-white overflow-hidden p-4">
+          <div className="absolute inset-0 z-0">
+            <OptimizedImage
+              src={fotoInicio}
+              alt="Imagem promocional do single Peito Sambô"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black opacity-60 pointer-events-none" />
+          </div>
 
-          <div className="absolute inset-0 bg-black opacity-60 pointer-events-none"></div>
-        </div>
+          <nav className="absolute top-0 left-0 z-20 p-5">
+            <Link
+              to="/"
+              className="flex items-center gap-2 text-white/70 hover:text-amarelo transition-colors text-sm"
+              aria-label="Voltar para página inicial"
+            >
+              ← Início
+            </Link>
+          </nav>
 
-        <div className="relative z-10 text-center flex flex-col items-center">
-          <h1 className="text-2xl md:text-6xl lg:text-7xl font-black uppercase tracking-wider text-shadow-custom">
-            Novo Single de Lexis
-          </h1>
-
-          <h2 className="text-amarelo text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-wider text-shadow-custom mt-2 mb-6">
-            Peito Sambô
-          </h2>
-          <p className="text-lg md:text-2xl font-light max-w-2xl text-shadow-custom mb-8">
-            Um samba que bate no coração: <br className="md:hidden" /> Peito
-            Sambô já chegou!!
-          </p>
-          {/* <Countdown targetDate={countDownDate} /> */}
-          <button onClick={() => trackClick("cta_single_disponivel_peito_sambo")}>
+          <div className="relative z-10 text-center flex flex-col items-center">
+            <h1 className="text-2xl md:text-6xl lg:text-7xl font-black uppercase tracking-wider text-shadow-custom">
+              Novo Single de Lexis
+            </h1>
+            <p className="font-principal text-6xl md:text-8xl lg:text-9xl text-amarelo text-shadow-custom mt-2 mb-6 leading-none">
+              Peito Sambô
+            </p>
+            <p className="text-lg md:text-2xl font-light max-w-2xl text-shadow-custom mb-8">
+              Um samba que bate no coração: <br className="md:hidden" /> Peito Sambô já chegou!!
+            </p>
             <a
               href={linkPreSave}
+              onClick={() => trackClick("cta_single_disponivel_peito_sambo")}
               className="cta-button bg-amarelo hover:bg-amber-600 text-stone-900 font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <span>Single Disponível</span>
+              Single Disponível
             </a>
-          </button>
-        </div>
-      </header>
+          </div>
+        </header>
 
-      <main>
-
-        <FadeInSection>
-          <section
-            id="video-clipe"
-            className="py-16 md:py-24 bg-stone-800 text-white"
-          >
-            <div className="container mx-auto px-4 text-center">
-              <h3 className="text-3xl md:text-4xl font-bold mb-8">
-                Assista ao Videoclipe
-              </h3>
-
-              <div className="aspect-video max-w-4xl mx-auto rounded-lg overflow-hidden shadow-2xl">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/ELcPAH_zdL0?si=_m-yD12IFKurqGRs"
-                  title="Clipe Peito Sambô"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                ></iframe>
-              </div>
-            </div>
-          </section>
-        </FadeInSection>
-
-        <FadeInSection>
-          <section className="py-16 md:py-24">
-            <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8 md:gap-12">
-              <div className="md:w-1/2 m-2 lg:p-6">
-                <div className="aspect-video rounded-lg overflow-hidden shadow-xl w-full">
+        <main>
+          <FadeInSection>
+            <section id="video-clipe" className="py-16 md:py-24 bg-stone-800 text-white">
+              <div className="container mx-auto px-4 text-center">
+                <h2 className="text-3xl md:text-4xl font-bold mb-8">
+                  Assista ao Videoclipe
+                </h2>
+                <div className="aspect-video max-w-4xl mx-auto rounded-lg overflow-hidden shadow-2xl">
                   <iframe
                     width="100%"
                     height="100%"
-                    src="https://www.youtube.com/embed/BSm2aWmMy6o?si=BqnIHBUMDAhm4pRE"
-                    title="Workshop SAMBA EM CENA: Vozes da Comunidade"
+                    src="https://www.youtube.com/embed/ELcPAH_zdL0?si=_m-yD12IFKurqGRs"
+                    title="Clipe Peito Sambô"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     className="w-full h-full"
-                  ></iframe>
+                  />
                 </div>
               </div>
-              <div className="md:w-1/2 text-center md:text-left text-red-950">
-                <div>
-                  <h3 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4">
-                    Workshop "SAMBA EM CENA: Vozes da Comunidade" 🎶
-                  </h3>
+            </section>
+          </FadeInSection>
+
+          <FadeInSection>
+            <section className="py-16 md:py-24">
+              <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <div className="md:w-1/2 m-2 lg:p-6">
+                  <div className="aspect-video rounded-lg overflow-hidden shadow-xl w-full">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src="https://www.youtube.com/embed/BSm2aWmMy6o?si=BqnIHBUMDAhm4pRE"
+                      title="Workshop SAMBA EM CENA: Vozes da Comunidade"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    />
+                  </div>
+                </div>
+                <div className="md:w-1/2 text-center md:text-left text-marrom">
+                  <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4">
+                    Workshop "SAMBA EM CENA: Vozes da Comunidade"
+                  </h2>
                   <div className="w-full leading-relaxed text-lg lg:text-xl">
                     <p className="mb-4">
                       Este vídeo é o <strong>Workshop Online</strong> do projeto
                       "SAMBA EM CENA: Vozes da Comunidade", pensado como
                       contrapartida formativa e, ao mesmo tempo, como um registro
-                      audiovisual do processo vivido ao longo da realização do
-                      projeto.
+                      audiovisual do processo vivido ao longo da realização do projeto.
                     </p>
                     <p className="mb-4">
                       Mais do que um workshop tradicional, este conteúdo se
@@ -143,205 +135,115 @@ export function PeitoSamboPage() {
                     </p>
                   </div>
                 </div>
-
               </div>
-            </div>
-          </section>
-        </FadeInSection>
+            </section>
+          </FadeInSection>
 
-
-
-        <FadeInSection>
-          <section id="sobre" className="py-16 md:py-24">
-            <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8 md:gap-12">
-              <div className="md:w-1/2">
-                <OptimizedImage
-                  src={fotoCapa}
-                  alt="Arte oficial do single Peito Sambô"
-                  className="rounded-lg shadow-xl w-full"
-                />
-              </div>
-              <div className="md:w-1/2 text-center md:text-left">
-                <p className="text-2xl md:text-3xl lg:text-4xl leading-relaxed font-light italic">
-                  “Peito Sambô é um samba que nasce do luto, mas celebra a vida
-                  — um canto sobre memória, liberdade, acolhimento e fé.”
-                </p>
-                <div className="mt-8 flex justify-center md:justify-start items-center gap-4">
-                  <span className="text-lg font-bold">Siga Lexis:</span>
-                  <div className="flex gap-4 text-2xl">
-                    <a
-                      href="https://www.instagram.com/lexisartista"
-                      aria-label="Instagram"
-                      className="social-icon transition-transform duration-300"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      onClick={() => trackOutbound("https://www.instagram.com/lexisartista", "instagram_peito_sambo")}
-                    >
-                      <div className="p-4 bg-amarelo rounded-full flex items-center justify-center">
-                        <FaInstagram className="text-vinho" />
-                      </div>
-                    </a>
-
-                    <a
-                      href="https://www.tiktok.com/@lexisartista"
-                      aria-label="TikTok"
-                      className="social-icon transition-transform duration-300"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      onClick={() => trackOutbound("https://www.tiktok.com/@lexisartista", "tiktok_peito_sambo")}
-                    >
-                      <div className="p-4 bg-amarelo rounded-full flex items-center justify-center">
-                        <FaTiktok className="text-vinho" />
-                      </div>
-                    </a>
-
-                    <a
-                      href="https://www.youtube.com/@lexisartista"
-                      aria-label="YouTube"
-                      className="social-icon transition-transform duration-300"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      onClick={() => trackOutbound("https://www.youtube.com/@lexisartista", "youtube_peito_sambo")}
-                    >
-                      <div className="p-4 bg-amarelo rounded-full flex items-center justify-center">
-                        <FaYoutube className="text-vinho" />
-                      </div>
-                    </a>
+          <FadeInSection>
+            <section id="sobre" className="py-16 md:py-24">
+              <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <div className="md:w-1/2">
+                  <OptimizedImage
+                    src={fotoCapa}
+                    alt="Arte oficial do single Peito Sambô"
+                    className="rounded-lg shadow-xl w-full"
+                  />
+                </div>
+                <div className="md:w-1/2 text-center md:text-left">
+                  <p className="text-2xl md:text-3xl lg:text-4xl leading-relaxed font-light italic">
+                    "Peito Sambô é um samba que nasce do luto, mas celebra a vida
+                    — um canto sobre memória, liberdade, acolhimento e fé."
+                  </p>
+                  <div className="mt-8 flex flex-col md:flex-row items-center md:items-center gap-4">
+                    <span className="text-lg font-bold text-marrom">Siga Lexis:</span>
+                    <SocialLinks
+                      variant="gold"
+                      links={["instagram", "tiktok", "youtube"]}
+                      analyticsContext="peito_sambo"
+                      align="center"
+                    />
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
-        </FadeInSection>
+            </section>
+          </FadeInSection>
 
-        {/* <FadeInSection>
-          <section id="newsletter" className="py-16 md:py-24 bg-stone-200">
-            <div className="container mx-auto px-4 text-center max-w-2xl">
-              <h3 className="text-3xl md:text-4xl font-bold mb-2">
-                Receba novidades em primeira mão!
-              </h3>
-              <p className="mb-8 text-stone-600">
-                Seja o primeiro a saber de tudo sobre o lançamento e próximos
-                shows.
-              </p>
-              <form action="#" method="POST" className="space-y-4">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Seu nome"
-                  required
-                  className="w-full p-4 rounded-lg border border-stone-300 focus:ring-2 focus:ring-amarelo focus:border-amarelo outline-none transition"
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Seu melhor e-mail"
-                  required
-                  className="w-full p-4 rounded-lg border border-stone-300 focus:ring-2 focus:ring-amarelo focus:border-amarelo outline-none transition"
-                />
-                <input
-                  type="tel"
-                  name="whatsapp"
-                  placeholder="Seu WhatsApp (opcional)"
-                  className="w-full p-4 rounded-lg border border-stone-300 focus:ring-2 focus:ring-amarelo focus:border-amarelo outline-none transition"
-                />
-                <button
-                  type="submit"
-                  className="cta-button w-full bg-stone-800 hover:bg-stone-900 text-white font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider"
-                >
-                  Quero receber!
-                </button>
-              </form>
-            </div>
-          </section>
-        </FadeInSection> */}
-
-        <FadeInSection>
-          <section id="playlist" className="py-16 md:py-24 text-center">
-            <div className="container mx-auto px-4">
-              <h3 className="text-3xl md:text-4xl font-bold mb-4">
-                A inspiração por trás da música
-              </h3>
-              <p className="mb-8 text-stone-600 text-lg">
-                "Versos d’Alma – ouça a playlist que inspira o novo single"
-              </p>
-
-              <div className="p-2">
-                <iframe
-                  data-testid="embed-iframe"
-                  style={{ borderRadius: "12px" }}
-                  src="https://open.spotify.com/embed/playlist/7w6hY3UFY1CbUsGp5h1m9r?utm_source=generator"
-                  width="100%"
-                  height="352"
-                  frameBorder="0"
-                  allowFullScreen
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                  loading="lazy"
-                  title="Sua Playlist do Spotify"
-                ></iframe>
+          <FadeInSection>
+            <section id="playlist" className="py-16 md:py-24 text-center">
+              <div className="container mx-auto px-4">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                  A inspiração por trás da música
+                </h2>
+                <p className="mb-8 text-stone-600 text-lg">
+                  "Versos d'Alma – ouça a playlist que inspira o novo single"
+                </p>
+                <div className="p-2">
+                  <iframe
+                    data-testid="embed-iframe"
+                    style={{ borderRadius: "12px" }}
+                    src="https://open.spotify.com/embed/playlist/7w6hY3UFY1CbUsGp5h1m9r?utm_source=generator"
+                    width="100%"
+                    height="352"
+                    frameBorder="0"
+                    allowFullScreen
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                    title="Playlist Versos d'Alma"
+                  />
+                </div>
               </div>
-            </div>
-          </section>
-        </FadeInSection>
+            </section>
+          </FadeInSection>
 
-        <FadeInSection>
-          <section
-            id="final-cta"
-            className="py-16 md:py-24 bg-stone-800 text-white text-center"
-          >
-            <div className="container mx-auto px-4">
-              <h3 className="text-3xl md:text-4xl font-bold mb-4">
-                Não fique de fora!
-              </h3>
-              <p className="mb-8 text-stone-300 text-lg">
-                Adicione já "Peito Sambô" na sua playlist!
-              </p>
-              <button onClick={() => trackClick("cta_single_ja_disponivel_peito_sambo")}>
+          <FadeInSection>
+            <section id="final-cta" className="py-16 md:py-24 bg-stone-800 text-white text-center">
+              <div className="container mx-auto px-4">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                  Não fique de fora!
+                </h2>
+                <p className="mb-8 text-stone-300 text-lg">
+                  Adicione já "Peito Sambô" na sua playlist!
+                </p>
                 <a
                   href={linkPreSave}
+                  onClick={() => trackClick("cta_single_ja_disponivel_peito_sambo")}
                   className="cta-button bg-amarelo hover:bg-amber-600 text-stone-900 font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <span>Single já Disponível</span>
+                  Single já Disponível
                 </a>
-              </button>
-            </div>
-          </section>
-        </FadeInSection>
+              </div>
+            </section>
+          </FadeInSection>
 
-        <FadeInSection>
-          <section className="py-16 md:py-24 text-center">
-            <div className="container mx-auto px-4">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-red-950">
-                Quer conhecer mais?
-              </h3>
-              <p className="mb-8 text-stone-600 text-lg">
-                Explore outros trabalhos e descubra mais sobre a artista.
-              </p>
-              <Link
-                to="/"
-                className="inline-block bg-red-950 hover:bg-red-900 text-white font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider transition-colors"
-              >
-                Conheça mais trabalhos da artista
-              </Link>
-            </div>
-          </section>
-        </FadeInSection>
-      </main>
+          <FadeInSection>
+            <section className="py-16 md:py-24 text-center">
+              <div className="container mx-auto px-4">
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 text-vinho">
+                  Quer conhecer mais?
+                </h2>
+                <p className="mb-8 text-stone-600 text-lg">
+                  Explore outros trabalhos e descubra mais sobre a artista.
+                </p>
+                <Link
+                  to="/"
+                  className="inline-block bg-vinho hover:bg-red-900 text-white font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider transition-colors"
+                >
+                  Conheça mais trabalhos da artista
+                </Link>
+              </div>
+            </section>
+          </FadeInSection>
+        </main>
 
-      <footer className="bg-stone-900 text-stone-400 py-12">
-        <div className="container mx-auto px-4 text-center">
-          <p className="font-bold mb-4">Apoio:</p>
-          <div className="flex justify-center items-center gap-8 mb-8 opacity-70">
-            <span className="text-xl font-bold">
-              <OptimizedImage src={logoPref} alt="Logo FMIC" />
-            </span>
+        <PageFooter>
+          <p className="font-bold text-stone-300 mb-4">Apoio:</p>
+          <div className="flex justify-center items-center gap-8 opacity-70">
+            <OptimizedImage src={logoPref} alt="Logo Prefeitura" />
           </div>
-          <p>&copy; {currentYear} Lexis. Todos os direitos reservados.</p>
-        </div>
-      </footer>
-    </div>
+        </PageFooter>
+      </div>
     </>
   );
 }
