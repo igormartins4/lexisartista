@@ -7,6 +7,8 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 
+import { trackClick, trackOutbound } from "../lib/analytics";
+
 import fotoInicio from "../assets/raizes/inicio.jpg";
 import fotoCard from "../assets/raizes/card.png";
 import logoDescentra from "../assets/raizes/logo-descentra.png";
@@ -57,7 +59,7 @@ export function RaizesPage() {
           <p className="text-lg md:text-2xl font-light max-w-2xl text-shadow-custom mb-8">
             Projeto Raízes Melódicas.
           </p>
-          <button>
+          <button onClick={() => trackClick("cta_ouca_ep_raizes")}>
             <a
               href={linkEP}
               className="cta-button bg-amarelo hover:bg-amber-600 text-stone-900 font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider"
@@ -185,6 +187,7 @@ export function RaizesPage() {
                   className="social-icon transition-transform duration-300"
                   rel="noopener noreferrer"
                   target="_blank"
+                  onClick={() => trackOutbound("https://www.instagram.com/lexisartista", "instagram_raizes")}
                 >
                   <div className="p-4 bg-amarelo rounded-full flex items-center justify-center">
                     <FaInstagram className="text-vinho" />
@@ -197,6 +200,7 @@ export function RaizesPage() {
                   className="social-icon transition-transform duration-300"
                   rel="noopener noreferrer"
                   target="_blank"
+                  onClick={() => trackOutbound("https://www.tiktok.com/@lexisartista", "tiktok_raizes")}
                 >
                   <div className="p-4 bg-amarelo rounded-full flex items-center justify-center">
                     <FaTiktok className="text-vinho" />
@@ -209,6 +213,7 @@ export function RaizesPage() {
                   className="social-icon transition-transform duration-300"
                   rel="noopener noreferrer"
                   target="_blank"
+                  onClick={() => trackOutbound("https://www.youtube.com/@lexisartista", "youtube_raizes")}
                 >
                   <div className="p-4 bg-amarelo rounded-full flex items-center justify-center">
                     <FaYoutube className="text-vinho" />

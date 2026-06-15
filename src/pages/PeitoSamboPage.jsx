@@ -8,6 +8,8 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 
+import { trackClick, trackOutbound } from "../lib/analytics";
+
 import fotoCapa from "../assets/Capa.png";
 import fotoInicio from "../assets/inicio.jpg";
 import logoPref from "../assets/logo-pref.png";
@@ -61,7 +63,7 @@ export function PeitoSamboPage() {
             Sambô já chegou!!
           </p>
           {/* <Countdown targetDate={countDownDate} /> */}
-          <button>
+          <button onClick={() => trackClick("cta_single_disponivel_peito_sambo")}>
             <a
               href={linkPreSave}
               className="cta-button bg-amarelo hover:bg-amber-600 text-stone-900 font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider"
@@ -173,6 +175,7 @@ export function PeitoSamboPage() {
                       className="social-icon transition-transform duration-300"
                       rel="noopener noreferrer"
                       target="_blank"
+                      onClick={() => trackOutbound("https://www.instagram.com/lexisartista", "instagram_peito_sambo")}
                     >
                       <div className="p-4 bg-amarelo rounded-full flex items-center justify-center">
                         <FaInstagram className="text-vinho" />
@@ -185,6 +188,7 @@ export function PeitoSamboPage() {
                       className="social-icon transition-transform duration-300"
                       rel="noopener noreferrer"
                       target="_blank"
+                      onClick={() => trackOutbound("https://www.tiktok.com/@lexisartista", "tiktok_peito_sambo")}
                     >
                       <div className="p-4 bg-amarelo rounded-full flex items-center justify-center">
                         <FaTiktok className="text-vinho" />
@@ -197,6 +201,7 @@ export function PeitoSamboPage() {
                       className="social-icon transition-transform duration-300"
                       rel="noopener noreferrer"
                       target="_blank"
+                      onClick={() => trackOutbound("https://www.youtube.com/@lexisartista", "youtube_peito_sambo")}
                     >
                       <div className="p-4 bg-amarelo rounded-full flex items-center justify-center">
                         <FaYoutube className="text-vinho" />
@@ -291,7 +296,7 @@ export function PeitoSamboPage() {
               <p className="mb-8 text-stone-300 text-lg">
                 Adicione já "Peito Sambô" na sua playlist!
               </p>
-              <button>
+              <button onClick={() => trackClick("cta_single_ja_disponivel_peito_sambo")}>
                 <a
                   href={linkPreSave}
                   className="cta-button bg-amarelo hover:bg-amber-600 text-stone-900 font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider"

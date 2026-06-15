@@ -6,6 +6,8 @@ import OptimizedImage from "../components/OptimizedImage";
 import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 
+import { trackClick, trackOutbound } from "../lib/analytics";
+
 import fotoInicio from "../assets/clave-de-sol/inicio.jpg";
 import fotoCard from "../assets/clave-de-sol/card.png";
 import fotoCapa from "../assets/clave-de-sol/capa.png";
@@ -58,7 +60,7 @@ export function ClaveDeSolPage() {
           <p className="text-lg md:text-2xl font-light max-w-2xl text-shadow-custom mb-8">
             Um samba que encoraja a recomeçar.
           </p>
-          <button>
+          <button onClick={() => trackClick("cta_single_disponivel_clave_de_sol")}>
             <a
               href={linkSingle}
               className="cta-button bg-amarelo hover:bg-amber-600 text-stone-900 font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider"
@@ -160,6 +162,7 @@ export function ClaveDeSolPage() {
                       className="social-icon transition-transform duration-300"
                       rel="noopener noreferrer"
                       target="_blank"
+                      onClick={() => trackOutbound("https://www.instagram.com/lexisartista", "instagram_clave_de_sol")}
                     >
                       <div className="p-4 bg-amarelo rounded-full flex items-center justify-center">
                         <FaInstagram className="text-vinho" />
@@ -172,6 +175,7 @@ export function ClaveDeSolPage() {
                       className="social-icon transition-transform duration-300"
                       rel="noopener noreferrer"
                       target="_blank"
+                      onClick={() => trackOutbound("http://www.youtube.com/@lexisartista", "youtube_clave_de_sol")}
                     >
                       <div className="p-4 bg-amarelo rounded-full flex items-center justify-center">
                         <FaYoutube className="text-vinho" />
@@ -226,7 +230,7 @@ export function ClaveDeSolPage() {
               <p className="mb-8 text-stone-300 text-lg">
                 Adicione já "Clave de Sol" na sua playlist!
               </p>
-              <button>
+              <button onClick={() => trackClick("cta_single_ja_disponivel_clave_de_sol")}>
                 <a
                   href={linkSingle}
                   className="cta-button bg-amarelo hover:bg-amber-600 text-stone-900 font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider"
