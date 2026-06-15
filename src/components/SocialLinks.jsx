@@ -29,7 +29,7 @@ const SOCIALS = {
 };
 
 /**
- * variant "dark"  — ícones sobre fundo escuro (bg-stone-800, hover → amarelo)
+ * variant "dark"  — ícones sobre fundo escuro (bg-terra-card, hover → amarelo)
  * variant "gold"  — ícones sobre círculo amarelo com ícone vinho (destaques)
  */
 export function SocialLinks({
@@ -61,7 +61,7 @@ export function SocialLinks({
             className={
               variant === "gold"
                 ? "social-icon transition-transform duration-300"
-                : "p-4 bg-stone-800 rounded-full hover:bg-amarelo hover:text-stone-900 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-amarelo focus:ring-offset-2 focus:ring-offset-stone-900"
+                : "p-4 bg-terra-card rounded-full hover:bg-amarelo hover:text-terra transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-amarelo focus:ring-offset-2 focus:ring-offset-terra"
             }
           >
             {variant === "gold" ? (
