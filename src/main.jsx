@@ -5,6 +5,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { HomePage } from "./pages/HomePage.jsx";
 import { PeitoSamboPage } from "./pages/PeitoSamboPage.jsx";
 import { ClaveDeSolPage } from "./pages/ClaveDeSolPage.jsx";
+import { RaizesPage } from "./pages/RaizesPage.jsx";
 import { initializeApp } from "firebase/app";
 import { getAnalytics, logEvent, setAnalyticsCollectionEnabled } from "firebase/analytics";
 
@@ -37,6 +38,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/" element={<HomePage />} />
           <Route path="/peito-sambo" element={<PeitoSamboPage />} />
           <Route path="/clave-de-sol" element={<ClaveDeSolPage />} />
+          <Route path="/raizes" element={<RaizesPage />} />
         </Routes>
       </BrowserRouter>
     </HelmetProvider>
