@@ -47,9 +47,6 @@ export function SocialLinks({
       {label && <span className="text-lg font-bold">{label}</span>}
       {items.map((social) => {
         const Icon = social.icon;
-        const trackLabel = analyticsContext
-          ? `${social.label.toLowerCase()}_${analyticsContext}`
-          : social.label;
         return (
           <a
             key={social.href}
@@ -57,7 +54,7 @@ export function SocialLinks({
             target="_blank"
             rel="noopener noreferrer"
             aria-label={social.ariaLabel}
-            onClick={() => trackOutbound(social.href, trackLabel)}
+            onClick={() => trackOutbound(social.href, social.label.toLowerCase(), analyticsContext)}
             className={
               variant === "gold"
                 ? "social-icon transition-transform duration-300"
