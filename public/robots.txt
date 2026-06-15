@@ -3,8 +3,30 @@
 User-agent: *
 Allow: /
 
+# Crawlers de IA — permitidos explicitamente para indexação em buscas generativas
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
 # Sitemap
 Sitemap: https://lexisartista.com.br/sitemap.xml
-
-# Crawl-delay
-Crawl-delay: 1

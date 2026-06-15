@@ -1,0 +1,29 @@
+{
+  "name": "Lexis Artista",
+  "short_name": "Lexis",
+  "description": "Lexis — Cantora e Compositora de Samba. Ouça Clave de Sol, Peito Sambô e o EP Raízes Melódicas.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a0e08",
+  "theme_color": "#fcb314",
+  "lang": "pt-BR",
+  "categories": ["music", "entertainment"],
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
