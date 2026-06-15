@@ -25,10 +25,7 @@ export function FadeInSection({ children }) {
   }, []);
 
   return (
-    <div
-      ref={domRef}
-      className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
-    >
+    <div ref={domRef} className={`fade-in-section ${isVisible ? "is-visible" : ""}`}>
       {children}
     </div>
   );

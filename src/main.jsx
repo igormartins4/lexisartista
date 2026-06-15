@@ -1,13 +1,13 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import { HomePage } from "./pages/HomePage.jsx";
-import { PeitoSamboPage } from "./pages/PeitoSamboPage.jsx";
-import { ClaveDeSolPage } from "./pages/ClaveDeSolPage.jsx";
-import { RaizesPage } from "./pages/RaizesPage.jsx";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { PageTracker } from "./components/PageTracker.jsx";
 import { initAnalytics } from "./lib/analytics";
+import { ClaveDeSolPage } from "./pages/ClaveDeSolPage.jsx";
+import { HomePage } from "./pages/HomePage.jsx";
+import { PeitoSamboPage } from "./pages/PeitoSamboPage.jsx";
+import { RaizesPage } from "./pages/RaizesPage.jsx";
 
 import "./index.css";
 

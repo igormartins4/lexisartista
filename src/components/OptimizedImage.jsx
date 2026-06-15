@@ -1,8 +1,6 @@
 function OptimizedImage({ src, alt, ...props }) {
   if (!src) {
-    console.error(
-      "OptimizedImage: A prop 'src' (o caminho da imagem original) é obrigatória."
-    );
+    console.error("OptimizedImage: A prop 'src' (o caminho da imagem original) é obrigatória.");
     return null;
   }
 

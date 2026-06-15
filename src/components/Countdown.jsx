@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 // --- Componente Countdown ---
 export function Countdown({ targetDate }) {
   const calculateTimeLeft = () => {
-    const difference = +new Date(targetDate) - +new Date();
+    const difference = +new Date(targetDate) - Date.now();
     let timeLeft = {};
 
     if (difference > 0) {
@@ -45,27 +45,19 @@ export function Countdown({ targetDate }) {
   return (
     <div className="flex justify-center gap-2 md:gap-4 my-8 text-center">
       <div className="countdown-item rounded-lg p-3 md:p-4 w-20 md:w-24">
-        <span className="text-3xl md:text-4xl font-bold">
-          {formatTime(timeLeft.days)}
-        </span>
+        <span className="text-3xl md:text-4xl font-bold">{formatTime(timeLeft.days)}</span>
         <span className="block text-xs uppercase">Dias</span>
       </div>
       <div className="countdown-item rounded-lg p-3 md:p-4 w-20 md:w-24">
-        <span className="text-3xl md:text-4xl font-bold">
-          {formatTime(timeLeft.hours)}
-        </span>
+        <span className="text-3xl md:text-4xl font-bold">{formatTime(timeLeft.hours)}</span>
         <span className="block text-xs uppercase">Horas</span>
       </div>
       <div className="countdown-item rounded-lg p-3 md:p-4 w-20 md:w-24">
-        <span className="text-3xl md:text-4xl font-bold">
-          {formatTime(timeLeft.minutes)}
-        </span>
+        <span className="text-3xl md:text-4xl font-bold">{formatTime(timeLeft.minutes)}</span>
         <span className="block text-xs uppercase">Minutos</span>
       </div>
       <div className="countdown-item rounded-lg p-3 md:p-4 w-20 md:w-24">
-        <span className="text-3xl md:text-4xl font-bold">
-          {formatTime(timeLeft.seconds)}
-        </span>
+        <span className="text-3xl md:text-4xl font-bold">{formatTime(timeLeft.seconds)}</span>
         <span className="block text-xs uppercase">Segundos</span>
       </div>
     </div>

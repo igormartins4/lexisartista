@@ -1,4 +1,4 @@
-import { FaInstagram, FaYoutube, FaTiktok, FaSpotify } from "react-icons/fa";
+import { FaInstagram, FaSpotify, FaTiktok, FaYoutube } from "react-icons/fa";
 import { trackOutbound } from "../lib/analytics";
 
 const SOCIALS = {
