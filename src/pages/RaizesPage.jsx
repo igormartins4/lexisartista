@@ -2,12 +2,10 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { FadeInSection } from "../components/FadeInSection";
 import OptimizedImage from "../components/OptimizedImage";
+import { SocialLinks } from "../components/SocialLinks";
+import { PageFooter } from "../components/PageFooter";
 
-import { FaInstagram } from "react-icons/fa";
-import { FaTiktok } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
-
-import { trackClick, trackOutbound } from "../lib/analytics";
+import { trackClick } from "../lib/analytics";
 
 import fotoInicio from "../assets/raizes/inicio.jpg";
 import fotoCard from "../assets/raizes/card.png";
@@ -15,8 +13,6 @@ import logoDescentra from "../assets/raizes/logo-descentra.png";
 import logoGoverno from "../assets/raizes/logo-governo.png";
 
 const linkEP = "#";
-
-const currentYear = new Date().getFullYear();
 
 export function RaizesPage() {
   return (
@@ -36,227 +32,172 @@ export function RaizesPage() {
         <meta name="twitter:description" content="Raízes é o novo EP da artista Lexis. Um projeto que celebra conexões, ancestralidade e música orgânica." />
         <meta name="twitter:image" content="https://lexisartista.com.br/og-raizes.png" />
       </Helmet>
+
       <div className="w-full h-full antialiased">
-      <header className="relative min-h-screen flex flex-col items-center justify-center text-white overflow-hidden p-4">
-        <div className="absolute inset-0 z-0">
-          <OptimizedImage
-            src={fotoInicio}
-            alt="Imagem promocional do EP Raízes"
-            className="w-full h-full object-cover"
-          />
+        <header className="relative min-h-screen flex flex-col items-center justify-center text-white overflow-hidden p-4">
+          <div className="absolute inset-0 z-0">
+            <OptimizedImage
+              src={fotoInicio}
+              alt="Imagem promocional do EP Raízes"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black opacity-60 pointer-events-none" />
+          </div>
 
-          <div className="absolute inset-0 bg-black opacity-60 pointer-events-none"></div>
-        </div>
+          <nav className="absolute top-0 left-0 z-20 p-5">
+            <Link
+              to="/"
+              className="flex items-center gap-2 text-white/70 hover:text-amarelo transition-colors text-sm"
+              aria-label="Voltar para página inicial"
+            >
+              ← Início
+            </Link>
+          </nav>
 
-        <div className="relative z-10 text-center flex flex-col items-center">
-          <h1 className="text-2xl md:text-6xl lg:text-7xl font-black uppercase tracking-wider text-shadow-custom">
-            Novo EP de Lexis
-          </h1>
-
-          <h2 className="text-amarelo text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-wider text-shadow-custom mt-2 mb-6">
-            RAÍZES
-          </h2>
-          <p className="text-lg md:text-2xl font-light max-w-2xl text-shadow-custom mb-8">
-            Projeto Raízes Melódicas.
-          </p>
-          <button onClick={() => trackClick("cta_ouca_ep_raizes")}>
+          <div className="relative z-10 text-center flex flex-col items-center">
+            <h1 className="text-2xl md:text-6xl lg:text-7xl font-black uppercase tracking-wider text-shadow-custom">
+              Novo EP de Lexis
+            </h1>
+            <p className="font-principal text-6xl md:text-8xl lg:text-9xl text-amarelo text-shadow-custom mt-2 mb-6 leading-none">
+              Raízes
+            </p>
+            <p className="text-lg md:text-2xl font-light max-w-2xl text-shadow-custom mb-8">
+              Projeto Raízes Melódicas.
+            </p>
             <a
               href={linkEP}
+              onClick={() => trackClick("cta_ouca_ep_raizes")}
               className="cta-button bg-amarelo hover:bg-amber-600 text-stone-900 font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <span>Ouça o EP</span>
+              Ouça o EP
             </a>
-          </button>
-        </div>
-      </header>
+          </div>
+        </header>
 
-      <main>
-        <FadeInSection>
-          <section className="py-16 md:py-24">
-            <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8 md:gap-12">
-              <div className="md:w-1/2 m-2 lg:p-6">
-                <OptimizedImage
-                  src={fotoCard}
-                  alt="Card promocional Raízes Melódicas"
-                  className="rounded-lg shadow-xl w-full"
-                />
-              </div>
-              <div className="md:w-1/2 text-center md:text-left text-red-950">
-                <div>
-                  <h3 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4">
-                    Raízes Melódicas 🌿
-                  </h3>
+        <main>
+          <FadeInSection>
+            <section className="py-16 md:py-24">
+              <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <div className="md:w-1/2 m-2 lg:p-6">
+                  <OptimizedImage
+                    src={fotoCard}
+                    alt="Card promocional Raízes Melódicas"
+                    className="rounded-lg shadow-xl w-full"
+                  />
+                </div>
+                <div className="md:w-1/2 text-center md:text-left text-marrom">
+                  <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4">
+                    Raízes Melódicas
+                  </h2>
                   <div className="w-full leading-relaxed text-lg lg:text-xl">
                     <p className="mb-4">
-                      O EP Raízes é um mergulho profundo na identidade, no calor humano e na conexão com a terra. Com texturas orgânicas e instrumentação acústica, Lexis traz em "Raízes Melódicas" uma sonoridade autêntica.
+                      O EP Raízes é um mergulho profundo na identidade, no calor
+                      humano e na conexão com a terra. Com texturas orgânicas e
+                      instrumentação acústica, Lexis traz em "Raízes Melódicas"
+                      uma sonoridade autêntica.
                     </p>
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
-        </FadeInSection>
+            </section>
+          </FadeInSection>
 
-        <FadeInSection>
-          <section className="py-16 md:py-24 bg-stone-800 text-white">
-            <div className="container mx-auto px-4 text-center">
-              <h3 className="text-3xl md:text-4xl font-bold mb-12">
-                Show de Lançamento
-              </h3>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                <div className="bg-stone-700 rounded-lg p-8 shadow-xl">
-                  <p className="text-sm uppercase tracking-wider text-amarelo mb-2">Data</p>
-                  <p className="text-2xl font-bold">25/07/2026</p>
-                </div>
-                <div className="bg-stone-700 rounded-lg p-8 shadow-xl">
-                  <p className="text-sm uppercase tracking-wider text-amarelo mb-2">Horário</p>
-                  <p className="text-2xl font-bold">19hrs</p>
-                </div>
-                <div className="bg-stone-700 rounded-lg p-8 shadow-xl">
-                  <p className="text-sm uppercase tracking-wider text-amarelo mb-2">Local</p>
-                  <p className="text-lg font-bold">NaCaza</p>
-                  <p className="text-sm text-stone-300">Rua México 119, bairro Glória - Contagem</p>
+          <FadeInSection>
+            <section className="py-16 md:py-24 bg-stone-800 text-white">
+              <div className="container mx-auto px-4 text-center">
+                <h2 className="text-3xl md:text-4xl font-bold mb-12">
+                  Show de Lançamento
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                  <div className="bg-stone-700 rounded-lg p-8 shadow-xl">
+                    <p className="text-sm uppercase tracking-wider text-amarelo mb-2">Data</p>
+                    <p className="text-2xl font-bold">25/07/2026</p>
+                  </div>
+                  <div className="bg-stone-700 rounded-lg p-8 shadow-xl">
+                    <p className="text-sm uppercase tracking-wider text-amarelo mb-2">Horário</p>
+                    <p className="text-2xl font-bold">19hrs</p>
+                  </div>
+                  <div className="bg-stone-700 rounded-lg p-8 shadow-xl">
+                    <p className="text-sm uppercase tracking-wider text-amarelo mb-2">Local</p>
+                    <p className="text-lg font-bold">NaCaza</p>
+                    <p className="text-sm text-stone-300">Rua México 119, bairro Glória - Contagem</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </section>
-        </FadeInSection>
+            </section>
+          </FadeInSection>
 
-        <FadeInSection>
-          <section className="py-16 md:py-24 bg-stone-800 text-white">
-            <div className="container mx-auto px-4 text-center">
-              <h3 className="text-3xl md:text-4xl font-bold mb-8">
-                Visualizers
-              </h3>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                <div className="aspect-video rounded-lg overflow-hidden shadow-2xl">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/"
-                    title="Visualizer 1"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  ></iframe>
-                </div>
-                <div className="aspect-video rounded-lg overflow-hidden shadow-2xl">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/"
-                    title="Visualizer 2"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  ></iframe>
-                </div>
-                <div className="aspect-video rounded-lg overflow-hidden shadow-2xl">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/"
-                    title="Visualizer 3"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  ></iframe>
+          <FadeInSection>
+            <section className="py-16 md:py-24 bg-stone-800 text-white">
+              <div className="container mx-auto px-4 text-center">
+                <h2 className="text-3xl md:text-4xl font-bold mb-8">Visualizers</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                  {["Visualizer 1", "Visualizer 2", "Visualizer 3"].map((title) => (
+                    <div key={title} className="aspect-video rounded-lg overflow-hidden shadow-2xl">
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src="https://www.youtube.com/embed/"
+                        title={title}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-full h-full"
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
-            </div>
-          </section>
-        </FadeInSection>
+            </section>
+          </FadeInSection>
 
-        <FadeInSection>
-          <section className="py-16 md:py-24">
-            <div className="container mx-auto px-4 text-center">
-              <h3 className="text-2xl md:text-3xl font-bold mb-8 text-red-950">
-                Siga Lexis
-              </h3>
-              <div className="flex justify-center items-center gap-4 text-2xl">
-                <a
-                  href="https://www.instagram.com/lexisartista"
-                  aria-label="Instagram"
-                  className="social-icon transition-transform duration-300"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  onClick={() => trackOutbound("https://www.instagram.com/lexisartista", "instagram_raizes")}
-                >
-                  <div className="p-4 bg-amarelo rounded-full flex items-center justify-center">
-                    <FaInstagram className="text-vinho" />
-                  </div>
-                </a>
-
-                <a
-                  href="https://www.tiktok.com/@lexisartista"
-                  aria-label="TikTok"
-                  className="social-icon transition-transform duration-300"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  onClick={() => trackOutbound("https://www.tiktok.com/@lexisartista", "tiktok_raizes")}
-                >
-                  <div className="p-4 bg-amarelo rounded-full flex items-center justify-center">
-                    <FaTiktok className="text-vinho" />
-                  </div>
-                </a>
-
-                <a
-                  href="https://www.youtube.com/@lexisartista"
-                  aria-label="YouTube"
-                  className="social-icon transition-transform duration-300"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  onClick={() => trackOutbound("https://www.youtube.com/@lexisartista", "youtube_raizes")}
-                >
-                  <div className="p-4 bg-amarelo rounded-full flex items-center justify-center">
-                    <FaYoutube className="text-vinho" />
-                  </div>
-                </a>
+          <FadeInSection>
+            <section className="py-16 md:py-24 text-center">
+              <div className="container mx-auto px-4">
+                <h2 className="text-2xl md:text-3xl font-bold mb-6 text-vinho">
+                  Siga Lexis
+                </h2>
+                <SocialLinks
+                  variant="gold"
+                  links={["instagram", "tiktok", "youtube"]}
+                  analyticsContext="raizes"
+                />
               </div>
-            </div>
-          </section>
-        </FadeInSection>
+            </section>
+          </FadeInSection>
 
-        <FadeInSection>
-          <section className="py-16 md:py-24 text-center">
-            <div className="container mx-auto px-4">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-red-950">
-                Quer conhecer mais?
-              </h3>
-              <p className="mb-8 text-stone-600 text-lg">
-                Explore outros trabalhos e descubra mais sobre a artista.
-              </p>
-              <Link
-                to="/"
-                className="inline-block bg-red-950 hover:bg-red-900 text-white font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider transition-colors"
-              >
-                Conheça mais trabalhos da artista
-              </Link>
-            </div>
-          </section>
-        </FadeInSection>
-      </main>
+          <FadeInSection>
+            <section className="py-16 md:py-24 text-center">
+              <div className="container mx-auto px-4">
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 text-vinho">
+                  Quer conhecer mais?
+                </h2>
+                <p className="mb-8 text-stone-600 text-lg">
+                  Explore outros trabalhos e descubra mais sobre a artista.
+                </p>
+                <Link
+                  to="/"
+                  className="inline-block bg-vinho hover:bg-red-900 text-white font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider transition-colors"
+                >
+                  Conheça mais trabalhos da artista
+                </Link>
+              </div>
+            </section>
+          </FadeInSection>
+        </main>
 
-      <footer className="bg-stone-900 text-stone-400 py-12">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-sm mb-6 max-w-2xl mx-auto">
+        <PageFooter>
+          <p className="text-sm text-stone-500 mb-6 max-w-2xl mx-auto">
             Projeto realizado com recursos do Fundo Estadual de Cultura. FEC: xxxx.xxxx.xxxx
           </p>
-          <div className="flex justify-center items-center gap-8 mb-8">
+          <div className="flex justify-center items-center gap-8">
             <OptimizedImage src={logoDescentra} alt="Logo Descentra" className="h-16 w-auto" />
             <OptimizedImage src={logoGoverno} alt="Logo Governo" className="h-16 w-auto" />
           </div>
-          <p>&copy; {currentYear} Lexis. Todos os direitos reservados.</p>
-        </div>
-      </footer>
-    </div>
+        </PageFooter>
+      </div>
     </>
   );
 }
