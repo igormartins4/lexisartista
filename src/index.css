@@ -4,19 +4,53 @@
 @import "tailwindcss";
 
 @theme {
+  /* Paleta principal */
   --color-verde: #6b8232;
   --color-amarelo: #fcb314;
-  --color-marrom: #6a3517;
   --color-ambar: #d97706;
+  --color-marrom: #6a3517;
   --color-vinho: #5b0002;
+  --color-vinho-escuro: #3d0001;
   --color-branco: #ffffff;
   --color-preto: #000000;
 
-  /* fundos escuros quentes — substitui stone-900/800 genérico */
+  /* Fundos escuros quentes */
   --color-terra: #1a0e08;
   --color-terra-card: #281509;
+  --color-footer: #0e0803;
 
+  /* Overlay semitransparente para hero */
+  --color-overlay: rgb(0 0 0 / 0.65);
+
+  /* Texto em fundos escuros — ordenado do mais claro ao mais escuro
+     Contraste sobre --color-terra (#1a0e08):
+       texto            #f5ede3  ≈ 17:1  — títulos e texto principal
+       texto-suave      #d4bfa5  ≈ 11:1  — subtítulos
+       texto-moderado   #b09070  ≈  6.5:1 — labels e texto auxiliar
+       texto-decorativo #9b7a55  ≈  4.9:1 — elementos decorativos (WCAG AA)
+  */
+  --color-texto: #f5ede3;
+  --color-texto-suave: #d4bfa5;
+  --color-texto-moderado: #b09070;
+  --color-texto-decorativo: #9b7a55;
+
+  /* Texto em fundos claros */
+  --color-subtexto: #5a3a22;
+  --color-subtexto-claro: #b0a095;
+
+  /* Tipografia */
   --font-principal: "Carattere", sans-serif;
+
+  /* Tamanhos de fonte para títulos hero */
+  --text-hero: 9rem;
+  --text-hero--line-height: 1;
+  --text-hero-xl: 11rem;
+  --text-hero-xl--line-height: 1;
+
+  /* Letter-spacing semântico */
+  --tracking-label: 0.3em;
+  --tracking-label-wide: 0.35em;
+  --tracking-label-wider: 0.4em;
 }
 
 /**
