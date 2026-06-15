@@ -1,8 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import { FaInstagram, FaYoutube, FaTiktok, FaSpotify } from "react-icons/fa";
 
+import { trackClick, trackOutbound } from "../lib/analytics";
+
 import capaPeitoSambo from "../assets/Capa.png";
 import capaClaveDeSol from "../assets/clave-de-sol/capa.png";
+import capaRaizes from "../assets/raizes/card.png";
 
 const currentYear = new Date().getFullYear();
 
@@ -21,6 +24,13 @@ export function HomePage() {
       description: "Um samba que bate no coração",
       image: capaPeitoSambo,
       isNew: false,
+    },
+    {
+      href: "/raizes",
+      label: "Raízes",
+      description: "EP Raízes Melódicas",
+      image: capaRaizes,
+      isNew: true,
     },
   ];
 
@@ -55,15 +65,15 @@ export function HomePage() {
     <>
       <Helmet>
         <title>Lexis | Cantora e Compositora de Samba</title>
-        <meta name="description" content="Lexis é cantora e compositora brasileira de samba. Ouça seus singles 'Clave de Sol' e 'Peito Sambô'. Músicas autorais que unem samba, jazz, fé e brasilidade." />
+        <meta name="description" content="Lexis é cantora e compositora brasileira de samba. Ouça seus singles 'Clave de Sol', 'Peito Sambô' e o EP 'Raízes'. Músicas autorais que unem samba, jazz, fé e brasilidade." />
         <link rel="canonical" href="https://lexisartista.com.br/" />
         <meta property="og:url" content="https://lexisartista.com.br/" />
         <meta property="og:title" content="Lexis | Cantora e Compositora de Samba" />
-        <meta property="og:description" content="Lexis é cantora e compositora brasileira de samba. Ouça seus singles 'Clave de Sol' e 'Peito Sambô'." />
+        <meta property="og:description" content="Lexis é cantora e compositora brasileira de samba. Ouça seus singles 'Clave de Sol', 'Peito Sambô' e o EP 'Raízes'." />
         <meta property="og:image" content="https://lexisartista.com.br/og-image.png" />
         <meta name="twitter:url" content="https://lexisartista.com.br/" />
         <meta name="twitter:title" content="Lexis | Cantora e Compositora de Samba" />
-        <meta name="twitter:description" content="Lexis é cantora e compositora brasileira de samba. Ouça seus singles 'Clave de Sol' e 'Peito Sambô'." />
+        <meta name="twitter:description" content="Lexis é cantora e compositora brasileira de samba. Ouça seus singles 'Clave de Sol', 'Peito Sambô' e o EP 'Raízes'." />
         <meta name="twitter:image" content="https://lexisartista.com.br/og-image.png" />
       </Helmet>
       <div className="min-h-screen bg-linear-to-b from-stone-900 via-stone-800 to-stone-900 text-white">
@@ -88,11 +98,12 @@ export function HomePage() {
             Singles
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {singles.map((single) => (
               <a
                 key={single.href}
                 href={single.href}
+                onClick={() => trackClick("single_card", single.label)}
                 className="group relative block bg-stone-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 focus:outline-none focus:ring-4 focus:ring-amarelo focus:ring-offset-2 focus:ring-offset-stone-900"
                 aria-label={`Ver página do single ${single.label}`}
               >
@@ -157,16 +168,17 @@ export function HomePage() {
 
           <div className="flex justify-center items-center gap-4 flex-wrap">
             {socialLinks.map((social) => (
-              <a
-                key={social.href}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={social.ariaLabel}
-                className="p-4 bg-stone-800 rounded-full hover:bg-amarelo hover:text-stone-900 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-amarelo focus:ring-offset-2 focus:ring-offset-stone-900"
-              >
-                <social.icon className="w-6 h-6" aria-hidden="true" />
-              </a>
+                <a
+                  key={social.href}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.ariaLabel}
+                  onClick={() => trackOutbound(social.href, social.label)}
+                  className="p-4 bg-stone-800 rounded-full hover:bg-amarelo hover:text-stone-900 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-amarelo focus:ring-offset-2 focus:ring-offset-stone-900"
+                >
+                  <social.icon className="w-6 h-6" aria-hidden="true" />
+                </a>
             ))}
           </div>
         </section>
