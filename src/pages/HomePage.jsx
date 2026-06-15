@@ -8,11 +8,18 @@ import { trackClick } from "../lib/analytics";
 
 const singles = [
   {
+    href: "/raizes",
+    label: "Raízes",
+    description: "EP Raízes Melódicas",
+    image: capaRaizes,
+    isNew: true,
+  },
+  {
     href: "/clave-de-sol",
     label: "Clave de Sol",
     description: "Um samba que encoraja a recomeçar",
     image: capaClaveDeSol,
-    isNew: true,
+    isNew: false,
   },
   {
     href: "/peito-sambo",
@@ -20,13 +27,6 @@ const singles = [
     description: "Um samba que bate no coração",
     image: capaPeitoSambo,
     isNew: false,
-  },
-  {
-    href: "/raizes",
-    label: "Raízes",
-    description: "EP Raízes Melódicas",
-    image: capaRaizes,
-    isNew: true,
   },
 ];
 
