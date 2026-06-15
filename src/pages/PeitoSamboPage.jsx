@@ -7,11 +7,13 @@ import { FadeInSection } from "../components/FadeInSection";
 import OptimizedImage from "../components/OptimizedImage";
 import { PageFooter } from "../components/PageFooter";
 import { SocialLinks } from "../components/SocialLinks";
+import { useScrollDepth } from "../hooks/useScrollDepth";
 import { trackClick } from "../lib/analytics";
 
 const linkPreSave = "https://musicpro.live/s/7900279496364";
 
 export function PeitoSamboPage() {
+  useScrollDepth();
   return (
     <>
       <Helmet>
@@ -110,7 +112,13 @@ export function PeitoSamboPage() {
             </p>
             <a
               href={linkPreSave}
-              onClick={() => trackClick("cta_single_disponivel_peito_sambo")}
+              onClick={() =>
+                trackClick("cta_ouvir", {
+                  release_name: "Peito Sambô",
+                  content_type: "single",
+                  section: "hero",
+                })
+              }
               className="cta-button bg-amarelo hover:bg-ambar text-terra font-bold py-4 px-10 rounded-full text-sm uppercase tracking-widest"
               rel="noopener noreferrer"
               target="_blank"
@@ -121,7 +129,7 @@ export function PeitoSamboPage() {
         </header>
 
         <main>
-          <FadeInSection>
+          <FadeInSection sectionName="video_clipe">
             <section id="video-clipe" className="py-16 md:py-24 bg-terra-card text-white">
               <div className="container mx-auto px-4 text-center">
                 <h2 className="text-3xl md:text-4xl font-bold mb-8">Assista ao Videoclipe</h2>
@@ -141,7 +149,7 @@ export function PeitoSamboPage() {
             </section>
           </FadeInSection>
 
-          <FadeInSection>
+          <FadeInSection sectionName="workshop">
             <section className="py-16 md:py-24">
               <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8 md:gap-12">
                 <div className="md:w-1/2 m-2 lg:p-6">
@@ -181,7 +189,7 @@ export function PeitoSamboPage() {
             </section>
           </FadeInSection>
 
-          <FadeInSection>
+          <FadeInSection sectionName="sobre">
             <section id="sobre" className="py-16 md:py-24">
               <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8 md:gap-12">
                 <div className="md:w-1/2">
@@ -209,7 +217,7 @@ export function PeitoSamboPage() {
             </section>
           </FadeInSection>
 
-          <FadeInSection>
+          <FadeInSection sectionName="playlist">
             <section id="playlist" className="py-16 md:py-24 text-center">
               <div className="container mx-auto px-4">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -236,7 +244,7 @@ export function PeitoSamboPage() {
             </section>
           </FadeInSection>
 
-          <FadeInSection>
+          <FadeInSection sectionName="final_cta">
             <section id="final-cta" className="py-16 md:py-24 bg-terra-card text-white text-center">
               <div className="container mx-auto px-4">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">Não fique de fora!</h2>
@@ -245,7 +253,13 @@ export function PeitoSamboPage() {
                 </p>
                 <a
                   href={linkPreSave}
-                  onClick={() => trackClick("cta_single_ja_disponivel_peito_sambo")}
+                  onClick={() =>
+                    trackClick("cta_ouvir", {
+                      release_name: "Peito Sambô",
+                      content_type: "single",
+                      section: "final",
+                    })
+                  }
                   className="cta-button bg-amarelo hover:bg-ambar text-terra font-bold py-4 px-10 rounded-full text-sm uppercase tracking-widest"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -256,7 +270,7 @@ export function PeitoSamboPage() {
             </section>
           </FadeInSection>
 
-          <FadeInSection>
+          <FadeInSection sectionName="ver_mais">
             <section className="py-16 md:py-24 text-center">
               <div className="container mx-auto px-4">
                 <h2 className="text-2xl md:text-3xl font-bold mb-4 text-vinho">

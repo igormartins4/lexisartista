@@ -73,7 +73,7 @@ export function HomePage() {
         {/* Banner: próximo show */}
         <a
           href={PROXIMO_SHOW.href}
-          onClick={() => trackClick("banner_proximo_show")}
+          onClick={() => trackClick("banner_show", { show_date: "2026-07-25", venue: "NaCaza" })}
           className="block bg-amarelo text-terra hover:bg-ambar transition-colors focus:outline-none focus:ring-2 focus:ring-inset focus:ring-terra"
           aria-label={`Próximo show: ${PROXIMO_SHOW.data}, ${PROXIMO_SHOW.hora}, ${PROXIMO_SHOW.local}, ${PROXIMO_SHOW.cidade}`}
         >
@@ -117,7 +117,13 @@ export function HomePage() {
 
             <a
               href={destaque.href}
-              onClick={() => trackClick("destaque_card", destaque.label)}
+              onClick={() =>
+                trackClick("card_click", {
+                  release_name: destaque.label,
+                  content_type: destaque.type,
+                  position: "destaque",
+                })
+              }
               className="group relative flex flex-col sm:flex-row bg-terra-card rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-amarelo focus:ring-offset-2 focus:ring-offset-terra max-w-5xl mx-auto"
               aria-label={`Ver página do ${destaque.type === "ep" ? "EP" : "single"} ${destaque.label}`}
             >
@@ -185,7 +191,13 @@ export function HomePage() {
                 <a
                   key={item.href}
                   href={item.href}
-                  onClick={() => trackClick("discografia_card", item.label)}
+                  onClick={() =>
+                    trackClick("card_click", {
+                      release_name: item.label,
+                      content_type: item.type,
+                      position: "discografia",
+                    })
+                  }
                   className="group relative flex flex-row bg-terra-card rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-amarelo focus:ring-offset-2 focus:ring-offset-terra"
                   aria-label={`Ver página do ${item.type} ${item.label}`}
                 >

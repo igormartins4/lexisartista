@@ -8,11 +8,13 @@ import { FadeInSection } from "../components/FadeInSection";
 import OptimizedImage from "../components/OptimizedImage";
 import { PageFooter } from "../components/PageFooter";
 import { SocialLinks } from "../components/SocialLinks";
+import { useScrollDepth } from "../hooks/useScrollDepth";
 import { trackClick } from "../lib/analytics";
 
 const linkEP = "#";
 
 export function RaizesPage() {
+  useScrollDepth();
   return (
     <>
       <Helmet>
@@ -133,7 +135,13 @@ export function RaizesPage() {
             </p>
             <a
               href={linkEP}
-              onClick={() => trackClick("cta_ouca_ep_raizes")}
+              onClick={() =>
+                trackClick("cta_ouvir", {
+                  release_name: "Raízes",
+                  content_type: "ep",
+                  section: "hero",
+                })
+              }
               className="cta-button bg-amarelo hover:bg-ambar text-terra font-bold py-4 px-10 rounded-full text-sm uppercase tracking-widest"
               rel="noopener noreferrer"
               target="_blank"
@@ -144,7 +152,7 @@ export function RaizesPage() {
         </header>
 
         <main>
-          <FadeInSection>
+          <FadeInSection sectionName="sobre_ep">
             <section className="py-16 md:py-24">
               <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8 md:gap-12">
                 <div className="md:w-1/2 m-2 lg:p-6">
@@ -170,7 +178,7 @@ export function RaizesPage() {
             </section>
           </FadeInSection>
 
-          <FadeInSection>
+          <FadeInSection sectionName="show_lancamento">
             <section className="py-16 md:py-24 bg-terra-card text-white">
               <div className="container mx-auto px-4 text-center">
                 <h2 className="text-3xl md:text-4xl font-bold mb-12">Show de Lançamento</h2>
@@ -195,7 +203,7 @@ export function RaizesPage() {
             </section>
           </FadeInSection>
 
-          <FadeInSection>
+          <FadeInSection sectionName="visualizers">
             <section className="py-16 md:py-24 bg-terra-card text-white">
               <div className="container mx-auto px-4 text-center">
                 <h2 className="text-3xl md:text-4xl font-bold mb-8">Visualizers</h2>
@@ -219,7 +227,7 @@ export function RaizesPage() {
             </section>
           </FadeInSection>
 
-          <FadeInSection>
+          <FadeInSection sectionName="redes_sociais">
             <section className="py-16 md:py-24 text-center">
               <div className="container mx-auto px-4">
                 <h2 className="text-2xl md:text-3xl font-bold mb-6 text-vinho">Siga Lexis</h2>
@@ -232,7 +240,7 @@ export function RaizesPage() {
             </section>
           </FadeInSection>
 
-          <FadeInSection>
+          <FadeInSection sectionName="ver_mais">
             <section className="py-16 md:py-24 text-center">
               <div className="container mx-auto px-4">
                 <h2 className="text-2xl md:text-3xl font-bold mb-4 text-vinho">
