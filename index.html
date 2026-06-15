@@ -4,108 +4,160 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  
+
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="/manifest.json" />
+
   <!-- Primary Meta Tags -->
   <title>Lexis | Cantora e Compositora de Samba</title>
   <meta name="title" content="Lexis | Cantora e Compositora de Samba" />
-  <meta name="description" content="Lexis é cantora e compositora brasileira de samba. Ouça seus singles 'Clave de Sol' e 'Peito Sambô'. Músicas autorais que unem samba, jazz, fé e brasilidade." />
-  <meta name="keywords" content="Lexis, Lexis Artista, cantora, compositora, samba, música brasileira, MPB, Peito Sambô, Clave de Sol, Minas Gerais, artista independente, música autoral" />
+  <meta name="description" content="Lexis é cantora e compositora brasileira de samba. Ouça seus singles 'Clave de Sol', 'Peito Sambô' e o EP 'Raízes Melódicas'. Músicas autorais que unem samba, jazz, fé e brasilidade." />
+  <meta name="keywords" content="Lexis, Lexis Artista, cantora de samba, compositora, samba, música brasileira, MPB, Peito Sambô, Clave de Sol, Raízes Melódicas, Raízes, EP samba, Minas Gerais, Contagem, artista independente, música autoral, samba jazz, Samba d'Alma, Raízes Melódicas" />
   <meta name="author" content="Lexis" />
   <meta name="robots" content="index, follow" />
   <meta name="language" content="Portuguese" />
-  <meta name="revisit-after" content="7 days" />
   <link rel="canonical" href="https://lexisartista.com.br/" />
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://lexisartista.com.br/" />
   <meta property="og:title" content="Lexis | Cantora e Compositora de Samba" />
-  <meta property="og:description" content="Lexis é cantora e compositora brasileira de samba. Ouça seus singles 'Clave de Sol' e 'Peito Sambô'. Músicas autorais que unem samba, jazz, fé e brasilidade." />
+  <meta property="og:description" content="Lexis é cantora e compositora brasileira de samba. Ouça seus singles 'Clave de Sol', 'Peito Sambô' e o EP 'Raízes Melódicas'. Músicas autorais que unem samba, jazz, fé e brasilidade." />
   <meta property="og:image" content="https://lexisartista.com.br/og-image.png" />
+  <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Lexis - Cantora e Compositora de Samba" />
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:site_name" content="Lexis Artista" />
-  
+
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@lexisartista" />
+  <meta name="twitter:creator" content="@lexisartista" />
   <meta name="twitter:url" content="https://lexisartista.com.br/" />
   <meta name="twitter:title" content="Lexis | Cantora e Compositora de Samba" />
-  <meta name="twitter:description" content="Lexis é cantora e compositora brasileira de samba. Ouça seus singles 'Clave de Sol' e 'Peito Sambô'." />
+  <meta name="twitter:description" content="Lexis é cantora e compositora brasileira de samba. Ouça 'Clave de Sol', 'Peito Sambô' e o EP 'Raízes Melódicas'." />
   <meta name="twitter:image" content="https://lexisartista.com.br/og-image.png" />
   <meta name="twitter:image:alt" content="Lexis - Cantora e Compositora de Samba" />
-  <meta name="twitter:creator" content="@lexisartista" />
-  
-  <!-- WhatsApp / Telegram -->
-  <meta property="og:image:secure_url" content="https://lexisartista.com.br/og-image.png" />
-  
+
   <!-- Theme Color -->
   <meta name="theme-color" content="#fcb314" />
   <meta name="msapplication-TileColor" content="#fcb314" />
-  
-  <!-- Preconnect to external domains -->
+
+  <!-- Preconnect para fontes e serviços externos -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  
+  <link rel="preconnect" href="https://www.youtube.com" />
+  <link rel="preconnect" href="https://open.spotify.com" />
+  <link rel="preconnect" href="https://www.google-analytics.com" />
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Carattere&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet" />
-  
-  <!-- Stylesheet -->
-  <link href="/src/index.css" rel="stylesheet">
-  
+
+  <!-- Redirect handler para SPA no GitHub Pages -->
+  <script>
+    (function () {
+      var redirect = sessionStorage.getItem("redirect");
+      if (redirect) {
+        sessionStorage.removeItem("redirect");
+        if (redirect !== "/" && redirect !== "/index.html") {
+          history.replaceState(null, null, redirect);
+        }
+      }
+    })();
+  </script>
+
   <!-- Structured Data - JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "MusicGroup",
-    "name": "Lexis",
-    "alternateName": "Lexis Artista",
-    "description": "Lexis é cantora e compositora brasileira de samba. Músicas autorais que unem samba, jazz, fé e brasilidade.",
-    "url": "https://lexisartista.com.br",
-    "image": "https://lexisartista.com.br/og-image.png",
-    "genre": ["Samba", "MPB", "Jazz"],
-    "sameAs": [
-      "https://www.instagram.com/lexisartista",
-      "https://www.youtube.com/@lexisartista",
-      "https://www.tiktok.com/@lexisartista",
-      "https://open.spotify.com/artist/0vKJZGBl3lNy6B3zf5xZU7"
-    ],
-    "track": [
+    "@graph": [
       {
-        "@type": "MusicRecording",
-        "name": "Clave de Sol",
-        "url": "https://lexisartista.com.br/clave-de-sol",
-        "description": "Um samba que encoraja a recomeçar"
+        "@type": "MusicGroup",
+        "@id": "https://lexisartista.com.br/#artist",
+        "name": "Lexis",
+        "alternateName": ["Lexis Artista", "Lexis Cantora"],
+        "description": "Lexis é cantora e compositora brasileira de samba. Cria músicas autorais que unem samba, jazz, fé e brasilidade, com atuação em Minas Gerais.",
+        "url": "https://lexisartista.com.br",
+        "image": "https://lexisartista.com.br/og-image.png",
+        "genre": ["Samba", "MPB", "Jazz", "Samba-jazz"],
+        "foundingLocation": {
+          "@type": "Place",
+          "name": "Minas Gerais, Brasil",
+          "addressRegion": "MG",
+          "addressCountry": "BR"
+        },
+        "sameAs": [
+          "https://www.instagram.com/lexisartista",
+          "https://www.youtube.com/@lexisartista",
+          "https://www.tiktok.com/@lexisartista",
+          "https://open.spotify.com/artist/5OJMapp4NOHTD7XtNJGcdy"
+        ],
+        "track": [
+          {
+            "@type": "MusicRecording",
+            "name": "Clave de Sol",
+            "url": "https://lexisartista.com.br/clave-de-sol",
+            "description": "Um samba que encoraja a recomeçar. Single autoral que une samba e jazz para falar sobre recomeço, fé e perseverança.",
+            "genre": ["Samba", "Samba-jazz"]
+          },
+          {
+            "@type": "MusicRecording",
+            "name": "Peito Sambô",
+            "url": "https://lexisartista.com.br/peito-sambo",
+            "description": "Um samba que bate no coração. Nasce do luto, mas celebra a vida — um canto sobre memória, liberdade, acolhimento e fé.",
+            "genre": ["Samba"]
+          },
+          {
+            "@type": "MusicAlbum",
+            "albumReleaseType": "https://schema.org/EPRelease",
+            "name": "Raízes Melódicas",
+            "url": "https://lexisartista.com.br/raizes",
+            "description": "EP de Lexis que mergulha na identidade, no calor humano e na conexão com a terra. Texturas orgânicas e instrumentação acústica.",
+            "genre": ["Samba", "MPB"]
+          }
+        ]
       },
       {
-        "@type": "MusicRecording",
-        "name": "Peito Sambô",
-        "url": "https://lexisartista.com.br/peito-sambo",
-        "description": "Um samba que bate no coração"
+        "@type": "Person",
+        "@id": "https://lexisartista.com.br/#pessoa",
+        "name": "Lexis",
+        "jobTitle": "Cantora e Compositora",
+        "description": "Lexis é cantora e compositora brasileira de samba, com atuação em Minas Gerais. Cria músicas autorais que unem samba, jazz, fé e brasilidade.",
+        "url": "https://lexisartista.com.br",
+        "image": "https://lexisartista.com.br/og-image.png",
+        "nationality": {
+          "@type": "Country",
+          "name": "Brasil"
+        },
+        "sameAs": [
+          "https://www.instagram.com/lexisartista",
+          "https://www.youtube.com/@lexisartista",
+          "https://www.tiktok.com/@lexisartista",
+          "https://open.spotify.com/artist/5OJMapp4NOHTD7XtNJGcdy"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://lexisartista.com.br/#website",
+        "url": "https://lexisartista.com.br",
+        "name": "Lexis Artista",
+        "description": "Site oficial de Lexis, cantora e compositora brasileira de samba.",
+        "inLanguage": "pt-BR",
+        "publisher": {
+          "@id": "https://lexisartista.com.br/#artist"
+        }
       }
     ]
   }
   </script>
 </head>
-
-<script>
-  (function () {
-    var redirect = sessionStorage.getItem("redirect");
-    if (redirect) {
-      sessionStorage.removeItem("redirect");
-      if (redirect !== "/" && redirect !== "/index.html") {
-        history.replaceState(null, null, redirect);
-      }
-    }
-  })();
-</script>
 
 <body>
   <div id="root"></div>
