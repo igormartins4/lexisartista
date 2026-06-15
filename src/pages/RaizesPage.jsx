@@ -108,13 +108,13 @@ export function RaizesPage() {
               loading="eager"
               fetchPriority="high"
             />
-            <div className="absolute inset-0 bg-black/65 pointer-events-none" />
+            <div className="absolute inset-0 bg-overlay pointer-events-none" />
           </div>
 
           <nav className="absolute top-0 left-0 z-20 p-5">
             <Link
               to="/"
-              className="flex items-center gap-2 text-white/60 hover:text-amarelo transition-colors text-sm tracking-wide"
+              className="flex items-center gap-2 text-texto-moderado hover:text-amarelo transition-colors text-sm tracking-wide"
               aria-label="Voltar para página inicial"
             >
               ← Lexis
@@ -122,19 +122,19 @@ export function RaizesPage() {
           </nav>
 
           <div className="relative z-10 text-center flex flex-col items-center px-4">
-            <p className="text-xs uppercase tracking-[0.4em] text-white/50 text-shadow-custom mb-6">
+            <p className="text-xs uppercase tracking-[0.4em] text-texto-decorativo text-shadow-custom mb-6">
               — ep —
             </p>
-            <h1 className="font-principal text-7xl md:text-[9rem] lg:text-[11rem] text-amarelo text-shadow-custom leading-none mb-5">
+            <h1 className="font-principal text-7xl md:text-hero lg:text-hero-xl text-amarelo text-shadow-custom leading-none mb-5">
               Raízes
             </h1>
-            <p className="text-base md:text-xl font-light max-w-sm text-white/70 text-shadow-custom mb-10">
+            <p className="text-base md:text-xl font-light max-w-sm text-texto-suave text-shadow-custom mb-10">
               Projeto Raízes Melódicas
             </p>
             <a
               href={linkEP}
               onClick={() => trackClick("cta_ouca_ep_raizes")}
-              className="cta-button bg-amarelo hover:bg-ambar text-stone-900 font-bold py-4 px-10 rounded-full text-sm uppercase tracking-widest"
+              className="cta-button bg-amarelo hover:bg-ambar text-terra font-bold py-4 px-10 rounded-full text-sm uppercase tracking-widest"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -186,7 +186,7 @@ export function RaizesPage() {
                   <div className="bg-terra rounded-lg p-8 shadow-xl">
                     <p className="text-xs uppercase tracking-[0.3em] text-amarelo mb-3">Local</p>
                     <p className="text-lg font-bold">NaCaza</p>
-                    <p className="text-sm text-white/50">
+                    <p className="text-sm text-texto-decorativo">
                       Rua México 119, bairro Glória - Contagem
                     </p>
                   </div>
@@ -238,12 +238,12 @@ export function RaizesPage() {
                 <h2 className="text-2xl md:text-3xl font-bold mb-4 text-vinho">
                   Quer conhecer mais?
                 </h2>
-                <p className="mb-8 text-stone-600 text-lg">
+                <p className="mb-8 text-subtexto text-lg">
                   Explore outros trabalhos e descubra mais sobre a artista.
                 </p>
                 <Link
                   to="/"
-                  className="inline-block bg-vinho hover:bg-red-900 text-white font-bold py-4 px-10 rounded-full text-sm uppercase tracking-widest transition-colors"
+                  className="inline-block bg-vinho hover:bg-vinho-escuro text-white font-bold py-4 px-10 rounded-full text-sm uppercase tracking-widest transition-colors focus:outline-none focus:ring-4 focus:ring-vinho focus:ring-offset-2"
                 >
                   Conheça mais trabalhos da artista
                 </Link>
@@ -253,7 +253,7 @@ export function RaizesPage() {
         </main>
 
         <PageFooter>
-          <p className="text-sm text-stone-500 mb-6 max-w-2xl mx-auto">
+          <p className="text-sm text-subtexto-claro mb-6 max-w-2xl mx-auto">
             Projeto realizado com recursos do Fundo Estadual de Cultura. FEC: xxxx.xxxx.xxxx
           </p>
           <div className="flex justify-center items-center gap-8">

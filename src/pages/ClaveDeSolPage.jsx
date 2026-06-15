@@ -88,13 +88,13 @@ export function ClaveDeSolPage() {
               loading="eager"
               fetchPriority="high"
             />
-            <div className="absolute inset-0 bg-black/65 pointer-events-none" />
+            <div className="absolute inset-0 bg-overlay pointer-events-none" />
           </div>
 
           <nav className="absolute top-0 left-0 z-20 p-5">
             <Link
               to="/"
-              className="flex items-center gap-2 text-white/60 hover:text-amarelo transition-colors text-sm tracking-wide"
+              className="flex items-center gap-2 text-texto-moderado hover:text-amarelo transition-colors text-sm tracking-wide"
               aria-label="Voltar para página inicial"
             >
               ← Lexis
@@ -102,19 +102,19 @@ export function ClaveDeSolPage() {
           </nav>
 
           <div className="relative z-10 text-center flex flex-col items-center px-4">
-            <p className="text-xs uppercase tracking-[0.4em] text-white/50 text-shadow-custom mb-6">
+            <p className="text-xs uppercase tracking-[0.4em] text-texto-decorativo text-shadow-custom mb-6">
               — single —
             </p>
-            <h1 className="font-principal text-7xl md:text-[9rem] lg:text-[11rem] text-amarelo text-shadow-custom leading-none mb-5">
+            <h1 className="font-principal text-7xl md:text-hero lg:text-hero-xl text-amarelo text-shadow-custom leading-none mb-5">
               Clave de Sol
             </h1>
-            <p className="text-base md:text-xl font-light max-w-sm text-white/70 text-shadow-custom mb-10">
+            <p className="text-base md:text-xl font-light max-w-sm text-texto-suave text-shadow-custom mb-10">
               Um samba que encoraja a recomeçar
             </p>
             <a
               href={linkSingle}
               onClick={() => trackClick("cta_single_disponivel_clave_de_sol")}
-              className="cta-button bg-amarelo hover:bg-ambar text-stone-900 font-bold py-4 px-10 rounded-full text-sm uppercase tracking-widest"
+              className="cta-button bg-amarelo hover:bg-ambar text-terra font-bold py-4 px-10 rounded-full text-sm uppercase tracking-widest"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -207,7 +207,7 @@ export function ClaveDeSolPage() {
             <section id="playlist" className="py-16 md:py-24 text-center">
               <div className="container mx-auto px-4">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">Pra curtir os dias</h2>
-                <p className="mb-8 text-stone-600 text-lg">
+                <p className="mb-8 text-subtexto text-lg">
                   "Folia de Luz" - Ouça a playlist de carnaval criada por Lexis com muito samba,
                   mpb, fé, brasilidade e músicas que abraçam a alma.
                 </p>
@@ -233,13 +233,13 @@ export function ClaveDeSolPage() {
             <section id="final-cta" className="py-16 md:py-24 bg-terra-card text-white text-center">
               <div className="container mx-auto px-4">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">Não fique de fora!</h2>
-                <p className="mb-8 text-white/60 text-lg">
+                <p className="mb-8 text-texto-moderado text-lg">
                   Adicione já "Clave de Sol" na sua playlist!
                 </p>
                 <a
                   href={linkSingle}
                   onClick={() => trackClick("cta_single_ja_disponivel_clave_de_sol")}
-                  className="cta-button bg-amarelo hover:bg-ambar text-stone-900 font-bold py-4 px-10 rounded-full text-sm uppercase tracking-widest"
+                  className="cta-button bg-amarelo hover:bg-ambar text-terra font-bold py-4 px-10 rounded-full text-sm uppercase tracking-widest"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -255,12 +255,12 @@ export function ClaveDeSolPage() {
                 <h2 className="text-2xl md:text-3xl font-bold mb-4 text-vinho">
                   Quer conhecer mais?
                 </h2>
-                <p className="mb-8 text-stone-600 text-lg">
+                <p className="mb-8 text-subtexto text-lg">
                   Explore outros trabalhos e descubra mais sobre a artista.
                 </p>
                 <Link
                   to="/"
-                  className="inline-block bg-vinho hover:bg-red-900 text-white font-bold py-4 px-10 rounded-full text-sm uppercase tracking-widest transition-colors"
+                  className="inline-block bg-vinho hover:bg-vinho-escuro text-white font-bold py-4 px-10 rounded-full text-sm uppercase tracking-widest transition-colors focus:outline-none focus:ring-4 focus:ring-vinho focus:ring-offset-2"
                 >
                   Conheça mais trabalhos da artista
                 </Link>
@@ -270,7 +270,7 @@ export function ClaveDeSolPage() {
         </main>
 
         <PageFooter>
-          <p className="font-bold text-stone-300 mb-4">Apoio:</p>
+          <p className="font-bold text-subtexto-claro mb-4">Apoio:</p>
           <div className="hidden md:flex justify-center items-center">
             <div className="bg-terra-card p-8 rounded-lg">
               <OptimizedImage src={logosApoio} alt="Logos de apoio" className="max-w-2xl w-full" />
