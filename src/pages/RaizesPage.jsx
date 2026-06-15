@@ -1,16 +1,14 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { FadeInSection } from "../components/FadeInSection";
-import OptimizedImage from "../components/OptimizedImage";
-import { SocialLinks } from "../components/SocialLinks";
-import { PageFooter } from "../components/PageFooter";
-
-import { trackClick } from "../lib/analytics";
-
-import fotoInicio from "../assets/raizes/inicio.jpg";
 import fotoCard from "../assets/raizes/card.png";
+import fotoInicio from "../assets/raizes/inicio.jpg";
 import logoDescentra from "../assets/raizes/logo-descentra.png";
 import logoGoverno from "../assets/raizes/logo-governo.png";
+import { FadeInSection } from "../components/FadeInSection";
+import OptimizedImage from "../components/OptimizedImage";
+import { PageFooter } from "../components/PageFooter";
+import { SocialLinks } from "../components/SocialLinks";
+import { trackClick } from "../lib/analytics";
 
 const linkEP = "#";
 
@@ -19,17 +17,26 @@ export function RaizesPage() {
     <>
       <Helmet>
         <title>Raízes | Lexis - EP Raízes Melódicas</title>
-        <meta name="description" content="Raízes é o novo EP da artista Lexis. Um projeto que celebra conexões, ancestralidade e música orgânica." />
+        <meta
+          name="description"
+          content="Raízes é o novo EP da artista Lexis. Um projeto que celebra conexões, ancestralidade e música orgânica."
+        />
         <link rel="canonical" href="https://lexisartista.com.br/raizes" />
         <meta property="og:type" content="music.album" />
         <meta property="og:url" content="https://lexisartista.com.br/raizes" />
         <meta property="og:title" content="Raízes | Lexis - EP Raízes Melódicas" />
-        <meta property="og:description" content="Raízes é o novo EP da artista Lexis. Um projeto que celebra conexões, ancestralidade e música orgânica." />
+        <meta
+          property="og:description"
+          content="Raízes é o novo EP da artista Lexis. Um projeto que celebra conexões, ancestralidade e música orgânica."
+        />
         <meta property="og:image" content="https://lexisartista.com.br/og-raizes.png" />
         <meta property="music:musician" content="Lexis" />
         <meta name="twitter:url" content="https://lexisartista.com.br/raizes" />
         <meta name="twitter:title" content="Raízes | Lexis - EP Raízes Melódicas" />
-        <meta name="twitter:description" content="Raízes é o novo EP da artista Lexis. Um projeto que celebra conexões, ancestralidade e música orgânica." />
+        <meta
+          name="twitter:description"
+          content="Raízes é o novo EP da artista Lexis. Um projeto que celebra conexões, ancestralidade e música orgânica."
+        />
         <meta name="twitter:image" content="https://lexisartista.com.br/og-raizes.png" />
       </Helmet>
 
@@ -41,33 +48,33 @@ export function RaizesPage() {
               alt="Imagem promocional do EP Raízes"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black opacity-60 pointer-events-none" />
+            <div className="absolute inset-0 bg-black/65 pointer-events-none" />
           </div>
 
           <nav className="absolute top-0 left-0 z-20 p-5">
             <Link
               to="/"
-              className="flex items-center gap-2 text-white/70 hover:text-amarelo transition-colors text-sm"
+              className="flex items-center gap-2 text-white/60 hover:text-amarelo transition-colors text-sm tracking-wide"
               aria-label="Voltar para página inicial"
             >
-              ← Início
+              ← Lexis
             </Link>
           </nav>
 
-          <div className="relative z-10 text-center flex flex-col items-center">
-            <h1 className="text-2xl md:text-6xl lg:text-7xl font-black uppercase tracking-wider text-shadow-custom">
-              Novo EP de Lexis
-            </h1>
-            <p className="font-principal text-6xl md:text-8xl lg:text-9xl text-amarelo text-shadow-custom mt-2 mb-6 leading-none">
-              Raízes
+          <div className="relative z-10 text-center flex flex-col items-center px-4">
+            <p className="text-xs uppercase tracking-[0.4em] text-white/50 text-shadow-custom mb-6">
+              — ep —
             </p>
-            <p className="text-lg md:text-2xl font-light max-w-2xl text-shadow-custom mb-8">
-              Projeto Raízes Melódicas.
+            <h1 className="font-principal text-7xl md:text-[9rem] lg:text-[11rem] text-amarelo text-shadow-custom leading-none mb-5">
+              Raízes
+            </h1>
+            <p className="text-base md:text-xl font-light max-w-sm text-white/70 text-shadow-custom mb-10">
+              Projeto Raízes Melódicas
             </p>
             <a
               href={linkEP}
               onClick={() => trackClick("cta_ouca_ep_raizes")}
-              className="cta-button bg-amarelo hover:bg-amber-600 text-stone-900 font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider"
+              className="cta-button bg-amarelo hover:bg-ambar text-stone-900 font-bold py-4 px-10 rounded-full text-sm uppercase tracking-widest"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -93,10 +100,9 @@ export function RaizesPage() {
                   </h2>
                   <div className="w-full leading-relaxed text-lg lg:text-xl">
                     <p className="mb-4">
-                      O EP Raízes é um mergulho profundo na identidade, no calor
-                      humano e na conexão com a terra. Com texturas orgânicas e
-                      instrumentação acústica, Lexis traz em "Raízes Melódicas"
-                      uma sonoridade autêntica.
+                      O EP Raízes é um mergulho profundo na identidade, no calor humano e na conexão
+                      com a terra. Com texturas orgânicas e instrumentação acústica, Lexis traz em
+                      "Raízes Melódicas" uma sonoridade autêntica.
                     </p>
                   </div>
                 </div>
@@ -105,24 +111,24 @@ export function RaizesPage() {
           </FadeInSection>
 
           <FadeInSection>
-            <section className="py-16 md:py-24 bg-stone-800 text-white">
+            <section className="py-16 md:py-24 bg-terra-card text-white">
               <div className="container mx-auto px-4 text-center">
-                <h2 className="text-3xl md:text-4xl font-bold mb-12">
-                  Show de Lançamento
-                </h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-12">Show de Lançamento</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                  <div className="bg-stone-700 rounded-lg p-8 shadow-xl">
-                    <p className="text-sm uppercase tracking-wider text-amarelo mb-2">Data</p>
+                  <div className="bg-terra rounded-lg p-8 shadow-xl">
+                    <p className="text-xs uppercase tracking-[0.3em] text-amarelo mb-3">Data</p>
                     <p className="text-2xl font-bold">25/07/2026</p>
                   </div>
-                  <div className="bg-stone-700 rounded-lg p-8 shadow-xl">
-                    <p className="text-sm uppercase tracking-wider text-amarelo mb-2">Horário</p>
+                  <div className="bg-terra rounded-lg p-8 shadow-xl">
+                    <p className="text-xs uppercase tracking-[0.3em] text-amarelo mb-3">Horário</p>
                     <p className="text-2xl font-bold">19hrs</p>
                   </div>
-                  <div className="bg-stone-700 rounded-lg p-8 shadow-xl">
-                    <p className="text-sm uppercase tracking-wider text-amarelo mb-2">Local</p>
+                  <div className="bg-terra rounded-lg p-8 shadow-xl">
+                    <p className="text-xs uppercase tracking-[0.3em] text-amarelo mb-3">Local</p>
                     <p className="text-lg font-bold">NaCaza</p>
-                    <p className="text-sm text-stone-300">Rua México 119, bairro Glória - Contagem</p>
+                    <p className="text-sm text-white/50">
+                      Rua México 119, bairro Glória - Contagem
+                    </p>
                   </div>
                 </div>
               </div>
@@ -130,7 +136,7 @@ export function RaizesPage() {
           </FadeInSection>
 
           <FadeInSection>
-            <section className="py-16 md:py-24 bg-stone-800 text-white">
+            <section className="py-16 md:py-24 bg-terra-card text-white">
               <div className="container mx-auto px-4 text-center">
                 <h2 className="text-3xl md:text-4xl font-bold mb-8">Visualizers</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -156,9 +162,7 @@ export function RaizesPage() {
           <FadeInSection>
             <section className="py-16 md:py-24 text-center">
               <div className="container mx-auto px-4">
-                <h2 className="text-2xl md:text-3xl font-bold mb-6 text-vinho">
-                  Siga Lexis
-                </h2>
+                <h2 className="text-2xl md:text-3xl font-bold mb-6 text-vinho">Siga Lexis</h2>
                 <SocialLinks
                   variant="gold"
                   links={["instagram", "tiktok", "youtube"]}
@@ -179,7 +183,7 @@ export function RaizesPage() {
                 </p>
                 <Link
                   to="/"
-                  className="inline-block bg-vinho hover:bg-red-900 text-white font-bold py-4 px-10 rounded-full text-base lg:text-lg uppercase tracking-wider transition-colors"
+                  className="inline-block bg-vinho hover:bg-red-900 text-white font-bold py-4 px-10 rounded-full text-sm uppercase tracking-widest transition-colors"
                 >
                   Conheça mais trabalhos da artista
                 </Link>
