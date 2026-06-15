@@ -1,6 +1,6 @@
 import ReactGA from "react-ga4";
 
-const GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
+const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
 
 export function initAnalytics() {
   ReactGA.initialize(GA_MEASUREMENT_ID);
