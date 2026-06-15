@@ -37,6 +37,42 @@ export function PeitoSamboPage() {
           content="Peito Sambô é um samba que bate no coração. Single autoral de Lexis sobre memória, liberdade, acolhimento e fé."
         />
         <meta name="twitter:image" content="https://lexisartista.com.br/og-peito-sambo.png" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "MusicRecording",
+                "@id": "https://lexisartista.com.br/peito-sambo#recording",
+                name: "Peito Sambô",
+                description:
+                  "Um samba que bate no coração. Nasce do luto, mas celebra a vida — um canto sobre memória, liberdade, acolhimento e fé.",
+                url: "https://lexisartista.com.br/peito-sambo",
+                image: "https://lexisartista.com.br/og-peito-sambo.png",
+                genre: ["Samba"],
+                byArtist: { "@id": "https://lexisartista.com.br/#artist" },
+                inAlbum: { "@type": "MusicAlbum", name: "Singles" },
+              },
+              {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                  {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Lexis",
+                    item: "https://lexisartista.com.br/",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "Peito Sambô",
+                    item: "https://lexisartista.com.br/peito-sambo",
+                  },
+                ],
+              },
+            ],
+          })}
+        </script>
       </Helmet>
 
       <div className="w-full h-full antialiased">
@@ -46,6 +82,8 @@ export function PeitoSamboPage() {
               src={fotoInicio}
               alt="Imagem promocional do single Peito Sambô"
               className="w-full h-full object-cover"
+              loading="eager"
+              fetchPriority="high"
             />
             <div className="absolute inset-0 bg-black/65 pointer-events-none" />
           </div>

@@ -40,6 +40,42 @@ export function ClaveDeSolPage() {
           content="Clave de Sol é um samba que encoraja a recomeçar. Single autoral de Lexis que une samba e jazz."
         />
         <meta name="twitter:image" content="https://lexisartista.com.br/og-clave-de-sol.png" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "MusicRecording",
+                "@id": "https://lexisartista.com.br/clave-de-sol#recording",
+                name: "Clave de Sol",
+                description:
+                  "Um samba que encoraja a recomeçar. Single autoral que une samba e jazz para falar sobre recomeço, fé e perseverança. Projeto Samba d'Alma.",
+                url: "https://lexisartista.com.br/clave-de-sol",
+                image: "https://lexisartista.com.br/og-clave-de-sol.png",
+                genre: ["Samba", "Samba-jazz"],
+                byArtist: { "@id": "https://lexisartista.com.br/#artist" },
+                inAlbum: { "@type": "MusicAlbum", name: "Samba d'Alma" },
+              },
+              {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                  {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Lexis",
+                    item: "https://lexisartista.com.br/",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "Clave de Sol",
+                    item: "https://lexisartista.com.br/clave-de-sol",
+                  },
+                ],
+              },
+            ],
+          })}
+        </script>
       </Helmet>
 
       <div className="w-full h-full antialiased">
@@ -49,6 +85,8 @@ export function ClaveDeSolPage() {
               src={fotoInicio}
               alt="Imagem promocional do single Clave de Sol"
               className="w-full h-full object-cover"
+              loading="eager"
+              fetchPriority="high"
             />
             <div className="absolute inset-0 bg-black/65 pointer-events-none" />
           </div>

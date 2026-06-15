@@ -38,6 +38,64 @@ export function RaizesPage() {
           content="Raízes é o novo EP da artista Lexis. Um projeto que celebra conexões, ancestralidade e música orgânica."
         />
         <meta name="twitter:image" content="https://lexisartista.com.br/og-raizes.png" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "MusicAlbum",
+                "@id": "https://lexisartista.com.br/raizes#album",
+                albumReleaseType: "https://schema.org/EPRelease",
+                name: "Raízes Melódicas",
+                description:
+                  "EP de Lexis que mergulha na identidade, no calor humano e na conexão com a terra. Texturas orgânicas e instrumentação acústica.",
+                url: "https://lexisartista.com.br/raizes",
+                image: "https://lexisartista.com.br/og-raizes.png",
+                genre: ["Samba", "MPB"],
+                byArtist: { "@id": "https://lexisartista.com.br/#artist" },
+              },
+              {
+                "@type": "Event",
+                "@id": "https://lexisartista.com.br/raizes#show",
+                name: "Show de Lançamento — Raízes Melódicas",
+                description: "Show de lançamento do EP Raízes Melódicas de Lexis.",
+                startDate: "2026-07-25T19:00:00-03:00",
+                eventStatus: "https://schema.org/EventScheduled",
+                eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+                location: {
+                  "@type": "Place",
+                  name: "NaCaza",
+                  address: {
+                    "@type": "PostalAddress",
+                    streetAddress: "Rua México, 119 — Bairro Glória",
+                    addressLocality: "Contagem",
+                    addressRegion: "MG",
+                    addressCountry: "BR",
+                  },
+                },
+                performer: { "@id": "https://lexisartista.com.br/#artist" },
+                url: "https://lexisartista.com.br/raizes",
+              },
+              {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                  {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Lexis",
+                    item: "https://lexisartista.com.br/",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "Raízes",
+                    item: "https://lexisartista.com.br/raizes",
+                  },
+                ],
+              },
+            ],
+          })}
+        </script>
       </Helmet>
 
       <div className="w-full h-full antialiased">
@@ -47,6 +105,8 @@ export function RaizesPage() {
               src={fotoInicio}
               alt="Imagem promocional do EP Raízes"
               className="w-full h-full object-cover"
+              loading="eager"
+              fetchPriority="high"
             />
             <div className="absolute inset-0 bg-black/65 pointer-events-none" />
           </div>
