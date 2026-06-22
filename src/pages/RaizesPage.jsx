@@ -239,7 +239,7 @@ export function RaizesPage() {
                     <p className="text-xs uppercase tracking-[0.3em] text-amarelo mb-3">Local</p>
                     <p className="text-lg font-bold">NaCaza</p>
                     <a
-                      href="https://maps.app.goo.gl/YrHeCKDCEGr8QrYg6"
+                      href="https://www.google.com/maps/search/?api=1&query=Rua+M%C3%A9xico+119+Gl%C3%B3ria+Contagem+MG"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm text-texto-decorativo hover:text-amarelo transition-colors underline underline-offset-2"
