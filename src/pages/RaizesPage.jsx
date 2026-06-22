@@ -180,7 +180,10 @@ export function RaizesPage() {
           <FadeInSection sectionName="show_lancamento">
             <section className="py-16 md:py-24 bg-terra-card text-white">
               <div className="container mx-auto px-4 text-center">
-                <h2 className="text-3xl md:text-4xl font-bold mb-12">Show de Lançamento</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">Show de Lançamento do EP</h2>
+                <p className="text-lg text-texto-decorativo mb-12 max-w-xl mx-auto">
+                  Venha celebrar o lançamento de Raízes Melódicas ao vivo
+                </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                   <div className="bg-terra rounded-lg p-8 shadow-xl">
                     <p className="text-xs uppercase tracking-[0.3em] text-amarelo mb-3">Data</p>
@@ -193,9 +196,14 @@ export function RaizesPage() {
                   <div className="bg-terra rounded-lg p-8 shadow-xl">
                     <p className="text-xs uppercase tracking-[0.3em] text-amarelo mb-3">Local</p>
                     <p className="text-lg font-bold">NaCaza</p>
-                    <p className="text-sm text-texto-decorativo">
+                    <a
+                      href="https://maps.app.goo.gl/YrHeCKDCEGr8QrYg6"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-texto-decorativo hover:text-amarelo transition-colors underline underline-offset-2"
+                    >
                       Rua México 119, bairro Glória - Contagem
-                    </p>
+                    </a>
                   </div>
                 </div>
               </div>
