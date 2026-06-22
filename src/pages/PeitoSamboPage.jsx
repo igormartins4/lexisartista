@@ -1,8 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import fotoCapa from "../assets/Capa.png";
-import fotoInicio from "../assets/inicio.jpg";
-import logoPref from "../assets/logo-pref.png";
+import fotoCapa from "../assets/peito-sambo/Capa.png";
+import fotoInicio from "../assets/peito-sambo/inicio.jpg";
+import logoPref from "../assets/peito-sambo/logo-pref.png";
 import { FadeInSection } from "../components/FadeInSection";
 import OptimizedImage from "../components/OptimizedImage";
 import { PageFooter } from "../components/PageFooter";
