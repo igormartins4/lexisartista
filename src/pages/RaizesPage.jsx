@@ -11,7 +11,7 @@ import { SocialLinks } from "../components/SocialLinks";
 import { useScrollDepth } from "../hooks/useScrollDepth";
 import { trackClick } from "../lib/analytics";
 
-const linkEP = "#";
+const linkEP = "https://sndo.ffm.to/oxppavb";
 
 export function RaizesPage() {
   useScrollDepth();
@@ -208,13 +208,20 @@ export function RaizesPage() {
               <div className="container mx-auto px-4 text-center">
                 <h2 className="text-3xl md:text-4xl font-bold mb-8">Visualizers</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                  {["Visualizer 1", "Visualizer 2", "Visualizer 3"].map((title) => (
-                    <div key={title} className="aspect-video rounded-lg overflow-hidden shadow-2xl">
+                  {[
+                    { id: "sOrxJ5GR84Y", title: "Visualizer 1" },
+                    { id: "FXks9X7o8yM", title: "Visualizer 2" },
+                    { id: "MfxSQLakAz8", title: "Visualizer 3" },
+                  ].map((video) => (
+                    <div
+                      key={video.id}
+                      className="aspect-video rounded-lg overflow-hidden shadow-2xl"
+                    >
                       <iframe
                         width="100%"
                         height="100%"
-                        src="https://www.youtube.com/embed/"
-                        title={title}
+                        src={`https://www.youtube.com/embed/${video.id}`}
+                        title={video.title}
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
