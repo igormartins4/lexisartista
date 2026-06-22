@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import capaClaveDeSol from "../assets/clave-de-sol/capa.png";
 import capaPeitoSambo from "../assets/peito-sambo/Capa.png";
-import capaRaizes from "../assets/raizes/card.png";
+import capaRaizes from "../assets/raizes/capa.png";
 import { PageFooter } from "../components/PageFooter";
 import { SocialLinks } from "../components/SocialLinks";
 import { trackClick } from "../lib/analytics";

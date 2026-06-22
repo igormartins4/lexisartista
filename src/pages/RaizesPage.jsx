@@ -1,9 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import fotoCard from "../assets/raizes/card.png";
+import fotoCard from "../assets/raizes/capa.png";
 import fotoInicio from "../assets/raizes/inicio.jpg";
-import logoDescentra from "../assets/raizes/logo-descentra.png";
-import logoGoverno from "../assets/raizes/logo-governo.png";
+import logoSecult from "../assets/raizes/logo-secult-brasao.png";
 import { FadeInSection } from "../components/FadeInSection";
 import OptimizedImage from "../components/OptimizedImage";
 import { PageFooter } from "../components/PageFooter";
@@ -269,11 +268,15 @@ export function RaizesPage() {
 
         <PageFooter>
           <p className="text-sm text-subtexto-claro mb-6 max-w-2xl mx-auto">
-            Projeto realizado com recursos do Fundo Estadual de Cultura. FEC: xxxx.xxxx.xxxx
+            Projeto realizado com recursos do Fundo Estadual de Cultura. FEC: 2025.2508.0186
           </p>
-          <div className="flex justify-center items-center gap-8">
-            <OptimizedImage src={logoDescentra} alt="Logo Descentra" className="h-16 w-auto" />
-            <OptimizedImage src={logoGoverno} alt="Logo Governo" className="h-16 w-auto" />
+          <div className="flex flex-col items-center gap-2">
+            <p className="text-xs uppercase tracking-[0.2em] text-subtexto-claro">Realização</p>
+            <OptimizedImage
+              src={logoSecult}
+              alt="Secretaria de Estado de Cultura e Turismo de Minas Gerais"
+              className="h-20 w-auto"
+            />
           </div>
         </PageFooter>
       </div>
