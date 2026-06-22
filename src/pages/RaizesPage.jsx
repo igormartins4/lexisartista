@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import fotoCard from "../assets/raizes/capa.png";
 import fotoInicio from "../assets/raizes/inicio.jpg";
 import logoSecult from "../assets/raizes/logo-secult-brasao.png";
+import { Countdown } from "../components/Countdown";
 import { FadeInSection } from "../components/FadeInSection";
 import OptimizedImage from "../components/OptimizedImage";
 import { PageFooter } from "../components/PageFooter";
@@ -11,6 +12,7 @@ import { useScrollDepth } from "../hooks/useScrollDepth";
 import { trackClick } from "../lib/analytics";
 
 const linkEP = "https://sndo.ffm.to/oxppavb";
+const releaseDate = "2026-07-25T00:00:00";
 
 export function RaizesPage() {
   useScrollDepth();
@@ -20,18 +22,29 @@ export function RaizesPage() {
         <title>Raízes | Lexis - EP Raízes Melódicas</title>
         <meta
           name="description"
-          content="Raízes é o novo EP da artista Lexis. Um projeto que celebra conexões, ancestralidade e música orgânica."
+          content="Raízes é o novo EP da artista Lexis. Um projeto que celebra conexões, ancestralidade e música orgânica. Ouça o EP e venha para o show de lançamento dia 25 de julho de 2026 em Contagem."
         />
+        <meta
+          name="keywords"
+          content="Raízes, Lexis, EP, Raízes Melódicas, música, samba, MPB, show, lançamento, Contagem, Minas Gerais, música orgânica, instrumental acústico"
+        />
+        <meta name="author" content="Lexis" />
         <link rel="canonical" href="https://lexisartista.com.br/raizes" />
         <meta property="og:type" content="music.album" />
         <meta property="og:url" content="https://lexisartista.com.br/raizes" />
         <meta property="og:title" content="Raízes | Lexis - EP Raízes Melódicas" />
         <meta
           property="og:description"
-          content="Raízes é o novo EP da artista Lexis. Um projeto que celebra conexões, ancestralidade e música orgânica."
+          content="Raízes é o novo EP da artista Lexis. Um projeto que celebra conexões, ancestralidade e música orgânica. Lançamento dia 25 de julho de 2026."
         />
         <meta property="og:image" content="https://lexisartista.com.br/og-raizes.png" />
-        <meta property="music:musician" content="Lexis" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:site_name" content="Lexis Artista" />
+        <meta property="music:release_date" content="2026-07-25" />
+        <meta property="music:musician" content="https://lexisartista.com.br" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://lexisartista.com.br/raizes" />
         <meta name="twitter:title" content="Raízes | Lexis - EP Raízes Melódicas" />
         <meta
@@ -39,6 +52,7 @@ export function RaizesPage() {
           content="Raízes é o novo EP da artista Lexis. Um projeto que celebra conexões, ancestralidade e música orgânica."
         />
         <meta name="twitter:image" content="https://lexisartista.com.br/og-raizes.png" />
+        <meta name="twitter:image:alt" content="Capa do EP Raízes de Lexis" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -53,6 +67,7 @@ export function RaizesPage() {
                 url: "https://lexisartista.com.br/raizes",
                 image: "https://lexisartista.com.br/og-raizes.png",
                 genre: ["Samba", "MPB"],
+                datePublished: "2026-07-25",
                 byArtist: { "@id": "https://lexisartista.com.br/#artist" },
               },
               {
@@ -173,6 +188,33 @@ export function RaizesPage() {
                     </p>
                   </div>
                 </div>
+              </div>
+            </section>
+          </FadeInSection>
+
+          <FadeInSection sectionName="lancamento_ep">
+            <section className="py-16 md:py-24 bg-terra-card text-white">
+              <div className="container mx-auto px-4 text-center">
+                <h2 className="text-3xl md:text-4xl font-bold mb-2">Lançamento do EP</h2>
+                <p className="text-lg text-texto-decorativo mb-4 max-w-xl mx-auto">
+                  As músicas chegam dia 25 de julho de 2026
+                </p>
+                <Countdown targetDate={releaseDate} />
+                <a
+                  href={linkEP}
+                  onClick={() =>
+                    trackClick("cta_ouvir", {
+                      release_name: "Raízes",
+                      content_type: "ep",
+                      section: "lancamento",
+                    })
+                  }
+                  className="inline-block cta-button bg-amarelo hover:bg-ambar text-terra font-bold py-4 px-10 rounded-full text-sm uppercase tracking-widest mt-4"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ouça o EP
+                </a>
               </div>
             </section>
           </FadeInSection>
