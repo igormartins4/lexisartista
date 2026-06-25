@@ -12,7 +12,7 @@ import { useScrollDepth } from "../hooks/useScrollDepth";
 import { trackClick } from "../lib/analytics";
 
 const linkEP = "https://sndo.ffm.to/oxppavb";
-const releaseDate = "2026-07-25T00:00:00";
+const releaseDate = "2026-06-26T00:00:00";
 
 export function RaizesPage() {
   useScrollDepth();
@@ -22,7 +22,7 @@ export function RaizesPage() {
         <title>Raízes | Lexis - EP Raízes Melódicas</title>
         <meta
           name="description"
-          content="Raízes é o novo EP da artista Lexis. Um projeto que celebra conexões, ancestralidade e música orgânica. Ouça o EP e venha para o show de lançamento dia 25 de julho de 2026 em Contagem."
+          content="Raízes é o novo EP da artista Lexis. Um projeto que celebra conexões, ancestralidade e música orgânica. Ouça o EP e venha para o show de lançamento em Contagem."
         />
         <meta
           name="keywords"
@@ -35,14 +35,14 @@ export function RaizesPage() {
         <meta property="og:title" content="Raízes | Lexis - EP Raízes Melódicas" />
         <meta
           property="og:description"
-          content="Raízes é o novo EP da artista Lexis. Um projeto que celebra conexões, ancestralidade e música orgânica. Lançamento dia 25 de julho de 2026."
+          content="Raízes é o novo EP da artista Lexis. Um projeto que celebra conexões, ancestralidade e música orgânica. Lançamento em 2026."
         />
         <meta property="og:image" content="https://lexisartista.com.br/og-raizes.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="pt_BR" />
         <meta property="og:site_name" content="Lexis Artista" />
-        <meta property="music:release_date" content="2026-07-25" />
+        <meta property="music:release_date" content="2026-06-26" />
         <meta property="music:musician" content="https://lexisartista.com.br" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://lexisartista.com.br/raizes" />
@@ -67,7 +67,7 @@ export function RaizesPage() {
                 url: "https://lexisartista.com.br/raizes",
                 image: "https://lexisartista.com.br/og-raizes.png",
                 genre: ["Samba", "MPB"],
-                datePublished: "2026-07-25",
+                datePublished: "2026-06-26",
                 byArtist: { "@id": "https://lexisartista.com.br/#artist" },
               },
               {
@@ -197,7 +197,7 @@ export function RaizesPage() {
               <div className="container mx-auto px-4 text-center">
                 <h2 className="text-3xl md:text-4xl font-bold mb-2">Lançamento do EP</h2>
                 <p className="text-lg text-texto-decorativo mb-4 max-w-xl mx-auto">
-                  As músicas chegam dia 25 de julho de 2026
+                  Disponível agora em todas as plataformas
                 </p>
                 <Countdown targetDate={releaseDate} />
                 <a
