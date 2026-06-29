@@ -261,7 +261,7 @@ export function RaizesPage() {
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  Comprar Ingressos
+                  Adquirir Ingressos
                 </a>
               </div>
             </section>
