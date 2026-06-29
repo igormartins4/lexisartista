@@ -248,6 +248,21 @@ export function RaizesPage() {
                     </a>
                   </div>
                 </div>
+                <a
+                  href="https://www.sympla.com.br/evento/raizes-show-de-lancamento-de-lexis/3468633?share_id=copiarlink"
+                  onClick={() =>
+                    trackClick("cta_sympla", {
+                      release_name: "Raízes",
+                      content_type: "show",
+                      section: "show_lancamento",
+                    })
+                  }
+                  className="inline-block cta-button bg-amarelo hover:bg-ambar text-terra font-bold py-4 px-10 rounded-full text-sm uppercase tracking-widest mt-8"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Comprar Ingressos
+                </a>
               </div>
             </section>
           </FadeInSection>
