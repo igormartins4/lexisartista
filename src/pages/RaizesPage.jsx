@@ -298,6 +298,31 @@ export function RaizesPage() {
             </section>
           </FadeInSection>
 
+          <FadeInSection sectionName="playlist_show">
+            <section className="py-16 md:py-24 text-center">
+              <div className="container mx-auto px-4">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-vinho">Playlist do Show</h2>
+                <p className="mb-8 text-subtexto text-lg">
+                  Músicas que irei cantar no show de lançamento.
+                </p>
+                <div className="p-2">
+                  <iframe
+                    data-testid="embed-iframe"
+                    style={{ borderRadius: "12px" }}
+                    src="https://open.spotify.com/embed/playlist/6CCsmvZ9WkdltPc9q6JCwY?utm_source=generator"
+                    width="100%"
+                    height="352"
+                    frameBorder="0"
+                    allowFullScreen
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                    title="Playlist do Show Raízes"
+                  />
+                </div>
+              </div>
+            </section>
+          </FadeInSection>
+
           <FadeInSection sectionName="redes_sociais">
             <section className="py-16 md:py-24 text-center">
               <div className="container mx-auto px-4">
