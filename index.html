@@ -17,8 +17,11 @@
   <meta name="description" content="Lexis é cantora e compositora brasileira de samba. Ouça seus singles 'Clave de Sol', 'Peito Sambô' e o EP 'Raízes Melódicas'. Músicas autorais que unem samba, jazz, fé e brasilidade." />
   <meta name="keywords" content="Lexis, Lexis Artista, cantora de samba, compositora, samba, música brasileira, MPB, Peito Sambô, Clave de Sol, Raízes Melódicas, Raízes, EP samba, Minas Gerais, Contagem, artista independente, música autoral, samba jazz, Samba d'Alma, Raízes Melódicas" />
   <meta name="author" content="Lexis" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <meta name="language" content="Portuguese" />
+  <meta name="referrer" content="origin" />
+  <meta name="format-detection" content="telephone=no" />
   <link rel="canonical" href="https://lexisartista.com.br/" />
 
   <!-- Open Graph / Facebook -->
@@ -95,7 +98,8 @@
           "https://www.instagram.com/lexisartista",
           "https://www.youtube.com/@lexisartista",
           "https://www.tiktok.com/@lexisartista",
-          "https://open.spotify.com/artist/5OJMapp4NOHTD7XtNJGcdy"
+          "https://open.spotify.com/artist/5OJMapp4NOHTD7XtNJGcdy",
+          "https://www.sympla.com.br/produtor/lexis"
         ],
         "track": [
           {
@@ -103,36 +107,53 @@
             "name": "Clave de Sol",
             "url": "https://lexisartista.com.br/clave-de-sol",
             "description": "Um samba que encoraja a recomeçar. Single autoral que une samba e jazz para falar sobre recomeço, fé e perseverança.",
-            "genre": ["Samba", "Samba-jazz"]
+            "genre": ["Samba", "Samba-jazz"],
+            "datePublished": "2025"
           },
           {
             "@type": "MusicRecording",
             "name": "Peito Sambô",
             "url": "https://lexisartista.com.br/peito-sambo",
             "description": "Um samba que bate no coração. Nasce do luto, mas celebra a vida — um canto sobre memória, liberdade, acolhimento e fé.",
-            "genre": ["Samba"]
-          },
-          {
-            "@type": "MusicAlbum",
-            "albumReleaseType": "https://schema.org/EPRelease",
-            "name": "Raízes Melódicas",
-            "url": "https://lexisartista.com.br/raizes",
-            "description": "EP de Lexis que mergulha na identidade, no calor humano e na conexão com a terra. Texturas orgânicas e instrumentação acústica.",
-            "genre": ["Samba", "MPB"]
+            "genre": ["Samba"],
+            "datePublished": "2025"
           }
         ]
+      },
+      {
+        "@type": "MusicAlbum",
+        "@id": "https://lexisartista.com.br/raizes#album",
+        "albumReleaseType": "https://schema.org/EPRelease",
+        "name": "Raízes Melódicas",
+        "url": "https://lexisartista.com.br/raizes",
+        "description": "EP de Lexis que mergulha na identidade, no calor humano e na conexão com a terra. Texturas orgânicas e instrumentação acústica.",
+        "image": "https://lexisartista.com.br/og-raizes.png",
+        "genre": ["Samba", "MPB"],
+        "datePublished": "2026-07-25",
+        "byArtist": {
+          "@id": "https://lexisartista.com.br/#artist"
+        }
       },
       {
         "@type": "Person",
         "@id": "https://lexisartista.com.br/#pessoa",
         "name": "Lexis",
-        "jobTitle": "Cantora e Compositora",
+        "givenName": "Lexis",
+        "jobTitle": ["Cantora", "Compositora"],
         "description": "Lexis é cantora e compositora brasileira de samba, com atuação em Minas Gerais. Cria músicas autorais que unem samba, jazz, fé e brasilidade.",
         "url": "https://lexisartista.com.br",
         "image": "https://lexisartista.com.br/og-image.png",
         "nationality": {
           "@type": "Country",
           "name": "Brasil"
+        },
+        "birthPlace": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Minas Gerais",
+            "addressCountry": "BR"
+          }
         },
         "sameAs": [
           "https://www.instagram.com/lexisartista",
